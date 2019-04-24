@@ -6,6 +6,30 @@
 
 // You can delete this file if you're not using it
 
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+  const blogPost =
+    node.component && node.component.indexOf("blogTemplate.js") > 0;
+
+  if (node.internal.type === "SitePage" && blogPost) {
+    createNodeField({
+      node,
+      name: `slug`,
+      value: node.path
+    });
+    createNodeField({
+      node,
+      name: `title`,
+      value: node.context.title
+    });
+    createNodeField({
+      node,
+      name: `date`,
+      value: node.context.date
+    });
+  }
+};
+
 const path = require("path");
 
 exports.createPages = ({ actions, graphql }) => {
@@ -23,6 +47,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              title
+              date
             }
           }
         }
@@ -37,7 +63,10 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
+        context: {
+          title: node.frontmatter.title,
+          date: node.frontmatter.date
+        } // additional data can be passed via context
       });
     });
   });

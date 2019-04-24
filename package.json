@@ -10,6 +10,7 @@
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-s3": "^0.2.5",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-source-filesystem": "^2.0.29",
@@ -27,6 +28,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby-plugin-s3 deploy",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",

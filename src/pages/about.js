@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-function IndexPage(props) {
+function About() {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`teamclerks`]} />
-      <h1>Welcome</h1>
+      <SEO title="Home" keywords={[`historyblock`]} />
+      <h1>About</h1>
       <p>
         TeamClerks is an entity I founded around 2001. Originally, it was a
         gaming clan amongst my close friends. Eventually, it grew into a
@@ -24,13 +23,8 @@ function IndexPage(props) {
         instance, is a blog I built using React as the front-end because I
         wanted to try it out.
       </p>
-
-      <p>
-        This website is also the home of{" "}
-        <Link to="/historyblock">HistoryBlock</Link>.
-      </p>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default About;

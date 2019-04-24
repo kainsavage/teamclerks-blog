@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -11,17 +10,17 @@ function HistoryBlock() {
       <h1>HistoryBlock</h1>
       <h5>
         Current Version:{" "}
-        <Link to="https://addons.mozilla.org/en-US/firefox/addon/historyblock/">
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/historyblock/">
           v.2.0.0
-        </Link>
+        </a>
       </h5>
 
       <p>
         HistoryBlock was originally a Firefox addon that I created severar years
         ago. I have ported HistoryBlock to use the standardized{" "}
-        <Link to="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">
+        <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">
           Web Extension APIs
-        </Link>
+        </a>
         .
       </p>
 
@@ -36,9 +35,9 @@ function HistoryBlock() {
       <p>
         Currently, I am working on v2.1.0 which will include a lot of
         long-awaited feature requests. You can view the{" "}
-        <Link to="https://github.com/kainsavage/HistoryBlock/projects/1">
+        <a href="https://github.com/kainsavage/HistoryBlock/projects/1">
           v.2.1.0 kanban
-        </Link>{" "}
+        </a>{" "}
         (which conveniently illustrates what currently is, will be in the
         future, or has been worked on).
       </p>
@@ -46,9 +45,9 @@ function HistoryBlock() {
       <p>
         If you have a feature request or bug to report, you can search for
         answers or open an issue on the{" "}
-        <Link to="https://github.com/kainsavage/HistoryBlock/issues">
+        <a href="https://github.com/kainsavage/HistoryBlock/issues">
           issue tracker
-        </Link>
+        </a>
         .
       </p>
     </Layout>
