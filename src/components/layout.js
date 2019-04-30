@@ -43,6 +43,10 @@ function Layout({ children }) {
           .filter(obj => obj.node.fields && obj.node.fields.slug)
           .map(obj => obj.node.fields);
 
+        blogPosts.sort((a, b) => {
+          return a.date > b.date ? -1 : b.date > a.date ? 1 : 0;
+        });
+
         return (
           <>
             <Header siteTitle={data.site.siteMetadata.title} />
