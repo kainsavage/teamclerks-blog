@@ -19,10 +19,12 @@ So, my weird idea is to leverage Github to do that for me. I am imagining changi
 1. I write my new blog post
 2. I run git add/commit/push
 
-Then have my integrated deployment solution react on Github's webhooks to notify that `master` has been updated, so then it will:
+~~Then have my integrated deployment solution react on Github's webhooks to notify that `master` has been updated, so then it will:~~
 
-1. Run `npm run build`
-2. Run `npm run deploy`
+1. ~~Run `npm run build`~~
+2. ~~Run `npm run deploy`~~
+
+I did this; `git push origin master` now deploys the build to S3 automatically via Travis-CI.
 
 What is interesting about this is that I could actively allow other writers simply by accepting pull requests. See, each of these posts are just markdown after some simple metadata markup:
 
