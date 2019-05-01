@@ -2,6 +2,7 @@
 path: "/hello-world"
 date: "2017-05-17"
 title: "Hello, World!"
+author: "kain"
 ---
 
 This is the first post of my blog.

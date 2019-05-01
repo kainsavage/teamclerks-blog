@@ -27,6 +27,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `date`,
       value: node.context.date
     });
+    createNodeField({
+      node,
+      name: `author`,
+      value: node.context.author
+    });
   }
 };
 
@@ -49,6 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
               path
               title
               date
+              author
             }
           }
         }
@@ -65,7 +71,8 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           title: node.frontmatter.title,
-          date: node.frontmatter.date
+          date: node.frontmatter.date,
+          author: node.frontmatter.author
         } // additional data can be passed via context
       });
     });

@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 11.0
+install: yarn
+script: npm run build
+deploy:
+  provider: s3
+  access_key_id: $AWS_KEY
+  secret_access_key: $AWS_SECRET
+  bucket: "teamclerks.net"
+  acl: public_read
+  local_dir: public

@@ -2,6 +2,7 @@
 path: "/github-is-starting-to-impress-me"
 date: "2017-07-05"
 title: "Github is Starting to Impress Me"
+author: "kain"
 ---
 
 ### Preface

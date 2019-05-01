@@ -2,6 +2,7 @@
 path: "/historyblock-coming-under-teamclerks"
 date: "2017-08-29"
 title: "HistoryBlock Coming Under TeamClerks"
+author: "kain"
 ---
 
 I have added a new topnav link to a dedicated page about HistoryBlock, an addon I wrote for Firefox years ago. With the next release of HistoryBlock, v2.1.0, it will have a new extension identifier - going from `historyblock@kain` to `historyblock@teamclerks.net`. For a very long time, I have been hesitant to connect HistoryBlock and TeamClerks for reasons unknown, but I left the two entities separate until one day I was working on a task and say the extension identifier `historyblock@kain` next to all the other extensions with identifiers like `activity-stream@mozilla.org`, and I felt shame for not having more pride in my work.

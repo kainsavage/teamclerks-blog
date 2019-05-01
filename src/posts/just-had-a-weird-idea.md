@@ -2,6 +2,7 @@
 path: "/just-had-a-weird-idea"
 date: "2019-05-01"
 title: "Just Had a Weird Idea"
+author: "kain"
 ---
 
 This blog is built on GatsbyJS, which is a static site generator. The underlying blog posts that I write are just markdown files that sit in a `posts` directory in the Github repository for this blog. The way the site is built and deployed is really rather straight-forward:
@@ -35,4 +36,19 @@ title: "Just Had a Weird Idea"
 This blog is built on GatsbyJS, which is a static site generator...
 ```
 
-I could very easily build in the notion of an `author` piece of metadata and start accepting pull requests from anyone. This is interesting enough that I think I will probably do it.
+~~I could very easily build in the notion of an `author` piece of metadata and start accepting pull requests from anyone. This is interesting enough that I think I will probably do it.~~
+
+Okay, I did that:
+
+```
+---
+path: "/just-had-a-weird-idea"
+date: "2019-05-01"
+title: "Just Had a Weird Idea"
+author: "kain"
+---
+
+This blog is built on GatsbyJS, which is a static site generator...
+```
+
+Now, it shows the author name just under the post title (added some _sick_ FontAwesome icons, as well).

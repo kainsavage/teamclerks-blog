@@ -2,6 +2,7 @@
 path: "/deployed-the-blog"
 date: "2019-04-30"
 title: "Deployed the Blog"
+author: "kain"
 ---
 
 Because Gatsby builds into a fully static site, my needs have changed. I no longer need an actual running instance to serve the site anymore. Instead, I elected to serve my site directly via `S3`.

@@ -2,6 +2,7 @@
 path: "/updates-and-filesize"
 date: "2017-06-08"
 title: "Updates and Filesize"
+author: "kain"
 ---
 
 I deployed the latest version of my blog software this morning, and I improved a few simple things:

@@ -2,6 +2,7 @@
 path: "/we-secure-baby"
 date: "2017-05-18"
 title: "We Secure, Baby!"
+author: "kain"
 ---
 
 I played with [Let's Encrypt](https://letsencrypt.org/) and eventually got it working, as well as all the correct redirects and whatnot. I am happy to say that my [SSLLabs score](https://letsencrypt.org/) is a solid **A**. This was actually quite a bit easier than I had originally anticipated. The [CertBot](https://certbot.eff.org/) application provided by EFF was extremely intuitive, and after setting up the certificates (and a `cron` job to acquire new certificates twice a day... which seems aggressive, but it was recommended) the `nginx` configuration was relatively straight-forward.

@@ -2,7 +2,7 @@
 path: "/not-much-going-on"
 date: "2017-06-02"
 title: "Not Much Going on..."
-seo: "Test"
+author: "kain"
 ---
 
 I have not had a lot of time to work on my blog in the last few days, and I have not written much since getting Let's Encrypt running (without touching it since initial install, still going strong ^\_^); so, I thought I would post something and change that.
