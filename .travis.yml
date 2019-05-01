@@ -8,6 +8,7 @@ deploy:
   access_key_id: $AWS_KEY
   secret_access_key: $AWS_SECRET
   bucket: "teamclerks.net"
+  region: "us-west-1"
   skip_cleanup: true
   acl: public_read
   local_dir: public
