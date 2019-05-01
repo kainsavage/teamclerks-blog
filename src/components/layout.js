@@ -8,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, Link, graphql } from "gatsby";
+import styled from "styled-components";
 
 import Header from "./header";
 import "./layout.css";
@@ -50,77 +51,69 @@ function Layout({ children }) {
         return (
           <>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <section
-              style={{
-                display: `flex`,
-                flexDirection: `row`
-              }}
-            >
-              <div
-                style={{
-                  padding: `0 0 0 2%`,
-                  width: `250px`,
-                  display: `flex`,
-                  flexDirection: `column`
-                }}
-              >
-                <h5
-                  style={{
-                    marginBottom: "8px"
-                  }}
-                >
-                  Posts
-                </h5>
+            <Section>
+              <LeftNav>
+                <PostHeader>Posts</PostHeader>
                 {blogPosts.map(post => (
-                  <div
-                    key={post.slug}
-                    style={{
-                      display: `flex`,
-                      flexDirection: `row`,
-                      width: "100%"
-                    }}
-                  >
-                    <Link
-                      to={post.slug}
-                      style={{
-                        width: "80%",
-                        fontSize: "0.8em",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        padding: "0 10px 0 0"
-                      }}
-                    >
-                      {post.title}
-                    </Link>
-                    <span
-                      style={{
-                        fontSize: "0.6em",
-                        alignSelf: "flex-end"
-                      }}
-                    >
-                      {post.date}
-                    </span>
-                  </div>
+                  <Post>
+                    <PostLink to={post.slug}>{post.title}</PostLink>
+                    <PostDate>{post.date}</PostDate>
+                  </Post>
                 ))}
-              </div>
-              <div
-                style={{
-                  width: `75%`,
-                  padding: `0px 2%`,
-                  paddingTop: 0
-                }}
-              >
+              </LeftNav>
+              <Main>
                 <main>{children}</main>
                 <footer>© {new Date().getFullYear()} TeamClerks</footer>
-              </div>
-            </section>
+              </Main>
+            </Section>
           </>
         );
       }}
     />
   );
 }
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: row;
+`;
+
+const LeftNav = styled.div`
+  padding: 0 0 0 2%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Main = styled.div`
+  width: 75%;
+  padding: 0px 2%;
+  padding-top: 0;
+`;
+
+const PostHeader = styled.h5`
+  margin-bottom: 8px;
+`;
+
+const Post = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+
+const PostLink = styled(Link)`
+  width: 80%;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding 0 10px 0 0;
+`;
+
+const PostDate = styled.span`
+  font-size: 0.6em;
+  align-self: flex-end;
+`;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
