@@ -91,7 +91,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-100778358-1",
-        head: true
+        head: true,
+        cookieDomain: "teamclerks.net"
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
