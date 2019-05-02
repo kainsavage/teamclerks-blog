@@ -55,7 +55,7 @@ function Layout({ children }) {
               <LeftNav>
                 <PostHeader>Posts</PostHeader>
                 {blogPosts.map(post => (
-                  <Post>
+                  <Post key={post.slug}>
                     <PostLink to={post.slug}>{post.title}</PostLink>
                     <PostDate>{post.date}</PostDate>
                   </Post>
