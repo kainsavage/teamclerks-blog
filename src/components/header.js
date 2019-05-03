@@ -22,7 +22,6 @@ SiteHeader.defaultProps = {
 };
 
 const Header = styled.header`
-  background: rebeccapurple;
   margin-bottom: 1.45rem;
 `;
 

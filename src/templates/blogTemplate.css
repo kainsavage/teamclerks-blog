@@ -1,3 +1,18 @@
 code {
   white-space: pre !important;
 }
+
+/* Codeblock container div */
+.gatsby-highlight {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.gatsby-highlight,
+.gatsby-highlight pre,
+.gatsby-highlight pre code,
+.gatsby-highlight pre code span {
+  font: 100%/1.45em "Open Sans";
+  font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+}
