@@ -350,24 +350,24 @@ hgroup {
 ul {
   margin-left: 1.45rem;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-top: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
 }
 ol {
   margin-left: 1.45rem;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-top: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -394,12 +394,15 @@ dd {
 p {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-top: 1.45rem;
+}
+p:first-child {
+  margin-top: 0;
 }
 figure {
   margin-left: 0;
@@ -449,14 +452,14 @@ fieldset {
   margin-bottom: 1.45rem;
 }
 blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  background: #2d2d2d;
+  border-radius: 3;
+  border-left: 0.25rem solid #818184;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-right: 1.45rem;
+  padding-left: 1.45rem;
+  margin: 0;
 }
 form {
   margin-left: 0;
@@ -481,22 +484,22 @@ noscript {
 iframe {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-top: 1.45rem;
 }
 hr {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
+  margin-top: calc(1.45rem - 1px);
   background: hsla(0, 0%, 0%, 0.2);
   border: none;
   height: 1px;
@@ -504,12 +507,12 @@ hr {
 address {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-top: 1.45rem;
 }
 b {
   font-weight: bold;
@@ -542,14 +545,14 @@ li > ul {
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
-blockquote *:last-child {
-  margin-bottom: 0;
+blockquote *:first-child {
+  margin-top: 0;
 }
-li *:last-child {
-  margin-bottom: 0;
+li *:first-child {
+  margin-top: 0;
 }
-p *:last-child {
-  margin-bottom: 0;
+p *:first-child {
+  margin-top: 0;
 }
 li > p {
   margin-bottom: calc(1.45rem / 2);
@@ -634,6 +637,9 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+footer {
+  margin-top: 1.45rem;
 }
 
 /* PRISM */

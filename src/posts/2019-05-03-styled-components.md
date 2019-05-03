@@ -1,0 +1,126 @@
+---
+path: "/styled-components"
+date: "2019-05-03 1"
+title: "Styled Components"
+author: "kain"
+---
+
+I am in the midst of writing a React best practices document for work and I came upon the notion of styling in React applications both generally and specifically for components. I tend to run these ideas by one of my colleagues (who, incidentally, argued with me until I tried React more in earnest which led to me falling in love with it, so I tend to trust his React instincts). So, the conversation goes like this:
+
+I come into work in the morning and decide to DM him.
+
+Me:
+
+> Let's argue.
+
+Him:
+
+> I'm ready.
+
+The argument ensues and is a heated one. Ultimately, we take our opinions to our greater chat forum in the form of a poll to see a general concensus. Evenly split 50-50; I was surprised. In essence, we both like using styled-components, but in different ways. Following is a contrived example of his preference:
+
+```jsx
+import React from "react";
+import styled from "styled-components";
+
+export default function ExampleView(props) {
+  return (
+    <Wrapper>
+      <div className="title">Hello, World!</div>
+      <div className="body">Some stuff here</div>
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.div`
+  padding: 20px;
+
+  .title {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: 1px solid purple;
+  }
+  .body {
+    padding: 5px;
+    width: 30%;
+    height: 50px;
+    border: 1px solid purple;
+  }
+`;
+```
+
+I can see the appeal here; you get a lot:
+
+- Simple one-stop CSS
+- Encapsulation
+- Easily understood HTML
+- Theme-able wrapper element
+
+It is good and I would use this model, but I tend to lean more into the styled-components.
+
+See, originally I disliked JSX. After playing with it a bunch and understanding how React composes up while the data flows down, I decided that JSX was great. Moreover, it made understanding the differences between `<div>` and `<Div>` simple enough: there is no difference; I could make a component called `<Div>` that acts exactly the way `<div>` does and none would be the wiser.
+
+Something really simple (that is obviously not 100% covering what `<div>` does but illustrates my point):
+
+```jsx
+export default function Div(props) {
+  return <div>{props.children}</div>;
+}
+```
+
+This is everything I have ever wanted in HTML - the ability to be more declarative than the built-in elements (`<div>`, `<header>`, etc). Classnames get me closer by being able to do things like `<header className="siteHeader">`. But styled-components, by virtue of turning everything into a high-order component (in the same way my `<Div>` did), affords me the luxury of declaring my elements semantically. Instead of `<header className="siteHeader">`, I can have `<Header>`. So, from the same contrived example as before, we have my version:
+
+```jsx
+import React from "react";
+import styled from "styled-components";
+
+export default function ExampleView() {
+  return (
+    <Wrapper>
+      <Title>Hello, World!</Title>
+      <Body>Some stuff here</Body>
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.div`
+  padding: 20px;
+`;
+
+const Title = styled.div`
+  padding: 5px;
+  width: 30%;
+  height: 50px;
+  border: 1px solid purple;
+`;
+
+const Body styled.div`
+  padding: 5px;
+  width: 30%;
+  height: 50px;
+  border: 1px solid purple;
+`;
+```
+
+To me, this is the best. As a developer, I do not actually care what the underlying implementation is for my `<Title>` component; all I care is that I can read that and say "oh, that's the title."
+
+I concede that there may be times to use either/both; for example, when you need a property to affect the style of many components. The first way affords the developer the luxury of passing the prop to the parent a la `<Wrapper normal={props.normal}>` and the style can consume that prop for all styles whereas my preference would require either of:
+
+```jsx
+<Wrapper normal={props.normal}>
+  <Title normal={props.normal}>Hello, World!</Title>
+  <Body normal={props.normal}>Some stuff here</Body>
+</Wrapper>
+```
+
+which has the potential for a lot of repetition or
+
+```jsx
+<Wrapper normal={props.normal}>
+  <Title className="title">Hello, World!</Title>
+  <Body className="body">Some stuff here</Body>
+</Wrapper>
+```
+
+which somewhat defeats the point, but would allow custom selectors in the parent where the prop is solely consumed.

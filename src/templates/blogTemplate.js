@@ -21,7 +21,7 @@ export default function Template(props) {
             <FaUser /> {frontmatter.author}
           </Author>
           <PublishDate>
-            <FaCalendarAlt /> {frontmatter.date}
+            <FaCalendarAlt /> {frontmatter.date.split(" ")[0]}
           </PublishDate>
           <Post
             className="blog-post-content"
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         path
         title
         author

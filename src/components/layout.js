@@ -57,7 +57,7 @@ function Layout({ children }) {
                 {blogPosts.map(post => (
                   <Post key={post.slug}>
                     <PostLink to={post.slug}>{post.title}</PostLink>
-                    <PostDate>{post.date}</PostDate>
+                    <PostDate>{post.date.split(" ")[0]}</PostDate>
                   </Post>
                 ))}
               </LeftNav>
