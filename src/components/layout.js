@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, Link, graphql } from "gatsby";
 import styled from "styled-components";
+import { Icon } from "semantic-ui-react";
 
 import Header from "./header";
 import "./layout.css";
@@ -63,7 +64,10 @@ function Layout({ children }) {
               </LeftNav>
               <Main>
                 <main>{children}</main>
-                <footer>© {new Date().getFullYear()} TeamClerks</footer>
+                <footer>
+                  <Icon name="copyright outline" /> {new Date().getFullYear()}{" "}
+                  TeamClerks
+                </footer>
               </Main>
             </Section>
           </>

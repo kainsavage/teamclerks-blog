@@ -6,4 +6,5 @@
 
 // You can delete this file if you're not using it
 
+require("semantic-ui-css/semantic.min.css");
 require("prismjs/themes/prism-tomorrow.css");
