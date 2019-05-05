@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
-import { FaUser, FaCalendarAlt } from "react-icons/fa";
+import { Icon } from "semantic-ui-react";
 
 import "./blogTemplate.css";
 
@@ -18,10 +18,10 @@ export default function Template(props) {
         <div className="blog-post">
           <Title>{frontmatter.title}</Title>
           <Author>
-            <FaUser /> {frontmatter.author}
+            <Icon name="user" /> {frontmatter.author}
           </Author>
           <PublishDate>
-            <FaCalendarAlt /> {frontmatter.date.split(" ")[0]}
+            <Icon name="calendar alternate" /> {frontmatter.date.split(" ")[0]}
           </PublishDate>
           <Post
             className="blog-post-content"
