@@ -5,28 +5,29 @@
   "version": "0.1.0",
   "author": "kain <kain@teamclerks.net>",
   "dependencies": {
-    "gatsby": "^2.3.16",
-    "gatsby-image": "^2.0.37",
-    "gatsby-plugin-feed": "^2.2.0",
-    "gatsby-plugin-google-analytics": "^2.0.19",
-    "gatsby-plugin-manifest": "^2.0.28",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
+    "@techempower/react-governor": "^0.3.0",
+    "gatsby": "^2.13.14",
+    "gatsby-image": "^2.2.5",
+    "gatsby-plugin-feed": "^2.3.3",
+    "gatsby-plugin-google-analytics": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.2.2",
+    "gatsby-plugin-offline": "^2.2.2",
+    "gatsby-plugin-react-helmet": "^3.1.1",
     "gatsby-plugin-s3": "^0.2.5",
-    "gatsby-plugin-sharp": "^2.0.32",
-    "gatsby-remark-prismjs": "^3.2.8",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.1.17",
+    "gatsby-plugin-sharp": "^2.2.4",
+    "gatsby-remark-prismjs": "^3.3.2",
+    "gatsby-source-filesystem": "^2.1.4",
+    "gatsby-transformer-remark": "^2.6.3",
+    "gatsby-transformer-sharp": "^2.2.2",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^3.6.1",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.3.2"
   },
   "keywords": [
     "gatsby"
@@ -48,6 +49,6 @@
     "url": "https://github.com/kainsavage/teamclerks-blog/issues"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.0"
+    "babel-plugin-styled-components": "^1.10.6"
   }
 }
