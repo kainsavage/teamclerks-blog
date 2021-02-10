@@ -1,6 +1,6 @@
 ---
 path: "/quick-update-on-deployment"
-date: "2021-02-09"
+date: "2021-02-10"
 title: "Quick Update on Deployment"
 author: "kain"
 ---
