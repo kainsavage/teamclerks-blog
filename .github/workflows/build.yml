@@ -3,10 +3,10 @@ on:
     types: [created]
 
 name: Deploy to Amazon S3
-environment: Teamclerks.net
 
 jobs:
   build:
+    environment: Teamclerks.net
     runs-on: ubuntu-latest
     strategy:
       matrix:
