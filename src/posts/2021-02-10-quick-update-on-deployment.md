@@ -1,0 +1,35 @@
+---
+path: "/quick-update-on-deployment"
+date: "2021-02-09"
+title: "Quick Update on Deployment"
+author: "kain"
+---
+
+# Github Actions
+
+I used to deploy these posts via Travis-CI, but I decided to give Github Actions a try since we 
+have had good experiences with them at work. So far, I like it. It makes it really simple to draft 
+a new release (blog post).
+
+### Minor HK Randomizer Update
+
+I played some more on my save from yesterday this morning and started into the Fungal Wastes. 
+Pretty quickly, I ended up finding the Mantis Claw, which means that I have Isma's, Claw, and Cloak.
+Essentially, the entire map is opened up for me. I immediately went to Salubra to do a quick shade
+skip to get into Blue Lake, collect the item at Dreamnail and Dreamshield, then I doubled back into
+the City of Tears. I had also picked up a Pale ore somewhere along the way, so I decided to get the
+two items in the elevator from Resting Grounds area, grab the two items at King's Station, then 
+headed to get the bench in the Spire. I did not continue up the Spire because I wanted to run over
+and grab my nail upgrades first (since I had a Pale Ore, I could get two).
+
+From there, I went up to the toll bench and continued up to get the next stag at City Storerooms,
+which means four more items: the key item, the stag item, and the Wanderer's Journal outside that, 
+and the Vessel Fragment item. One of these items was Crystal Dash, and the other ended up being 
+Desolate Dive, so I decided to take a detour and do Soul Sanctum. Lastly, I dropped down to sell 
+to Lem.
+
+From there, I warped back to the Spire and did Watcher Nights, even though I did not have the 
+Dreamnail, to get the chest item which was a Pale Ore. From here, I warped back to Resting Grounds
+to collect the items in the grave and found another Pale Ore (although, I only now realized that I
+did not check the Grey Mourner), so I warped back to the toll bench in City of Tears and prepared
+to get my third nail upgrade.

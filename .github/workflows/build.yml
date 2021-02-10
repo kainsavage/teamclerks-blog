@@ -1,6 +1,4 @@
-on:
-  release:
-    types: [created]
+on: push
 
 name: Deploy to Amazon S3
 
@@ -11,6 +9,7 @@ jobs:
     strategy:
       matrix:
         node-version: [15.x]
+    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
 
@@ -29,13 +28,5 @@ jobs:
           aws-region: us-west-1
       - run: |
           aws s3 sync public s3://teamclerks.net
-#        env:
-#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
-#          AWS_REGION: us-west-1
-#          region: us-west-1
-#          bucket: teamclerks.net
-#          skip_cleanup: true
-#          acl: public_read
-#          local_dir: public
-#      - run: npm run deploy
+      - run: |
+          aws cloudfront create-invalidation --distribution-id E3HRHK7QR0LQ4A --paths "/index.html"
