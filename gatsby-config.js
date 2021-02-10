@@ -86,7 +86,6 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `teamclerks.net`,
-        region: `us-west-1`,
         skip_cleanup: true,
         acl: `public_read`,
         local_dir: `public`
