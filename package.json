@@ -1,53 +1,33 @@
 {
-  "name": "teamclerks-blog",
-  "private": true,
-  "description": "TeamClerks.net blog",
-  "version": "0.1.0",
-  "author": "kain <kain@teamclerks.net>",
-  "dependencies": {
-    "gatsby": "^2.32.3",
-    "gatsby-image": "^2.2.17",
-    "gatsby-plugin-feed": "^2.3.11",
-    "gatsby-plugin-google-analytics": "^2.1.14",
-    "gatsby-plugin-manifest": "^2.2.14",
-    "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-s3": "^0.3.8",
-    "gatsby-plugin-sharp": "^2.2.20",
-    "gatsby-remark-prismjs": "^3.3.12",
-    "gatsby-source-filesystem": "^2.1.21",
-    "gatsby-transformer-remark": "^2.6.21",
-    "gatsby-transformer-sharp": "^2.2.13",
-    "prismjs": "^1.17.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.7.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.86.0",
-    "styled-components": "^4.3.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "name": "~TODO~",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby-plugin-s3 deploy",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kainsavage/teamclerks-blog"
-  },
-  "bugs": {
-    "url": "https://github.com/kainsavage/teamclerks-blog/issues"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --check . && eslint --ignore-path .gitignore .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.6"
+    "@sveltejs/adapter-static": "^1.0.0-next.11",
+    "@sveltejs/kit": "next",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.34.0",
+    "vite": "^2.1.0",
+    "mdsvex": "^0.9.0",
+    "rehype-autolink-headings": "^5.0.1",
+    "rehype-slug": "^4.0.1",
+    "remark-abbr": "^1.4.1",
+    "remark-github": "^10.0.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fontsource/fira-mono": "^4.2.2",
+    "@lukeed/uuid": "^2.0.0",
+    "cookie": "^0.4.1"
   }
 }

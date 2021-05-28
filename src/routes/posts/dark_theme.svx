@@ -1,0 +1,10 @@
+# Dark Theme
+
+I am not a designer.
+
+My ability to be creative when it comes to colors/themes/etc is next to none. I use the tried and true method of
+stealing from designers. Go find a site that has some aspect you like, open the inspector, and straight up steal it. I
+realize that I am taking someone's hard work that they paid for, be it time or money or both, and reaping the fruit of
+the labors for myself. I just do not really care.
+
+I will probably tweak this one more; the sandy color for the links is interesting, but not sure I am in love with it.

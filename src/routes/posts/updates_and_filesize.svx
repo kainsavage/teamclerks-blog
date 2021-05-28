@@ -1,0 +1,43 @@
+# Updates and Filesize
+
+
+I deployed the latest version of my blog software this morning, and I improved a few simple things:
+
+- Moved around some of the logged-in links (none of you will see these, yet) for a better layout
+- Added some preferences functionality (none of you will see this, yet)
+- Added an [About](/about) page which has a very short description of what this site is
+- Added better styling for blockquote blocks
+- Enabled `gzip` compression in `nginx`
+
+On that last note, I want to bring up some things I find interesting. First, I have been a long-standing opponent of 
+SPAs (single-page applications) for a bevy of reasons, but a chief complaint had always been filesize. My tiny blog 
+React app after concatenation and minifaction (common JS production-grade processing) landed at a hefty ~775KB. I have 
+high resolution images hosted at less volume than that.
+
+So, my natural inclination is to enable `gzip` compression on the server, which I did, and that got the filesize down 
+to ~200KB. While that sounds great (200 is much less than 775), when looking at a broader context it still comes up shy 
+of great. `jQuery`, for instance, is a commonly used library and is often lamented as "too big" (as well as largely 
+unnecessary now), but measures up at ~35KB **before** compression, and likely that number gets down to the single-digit 
+range after.
+
+"Apples and Oranges!" many of you will shout! "You are comparing a utility library to a fully fledged single page 
+application's controller code [and entire framework codebase as well]"
+
+That is fair.
+
+Maybe 200KB after compression is reasonable for a blog of this size built on ReactJS. My primary concern is not the 
+current size, but that of the size in the future.
+
+Today, the only JavaScript loaded is 249.26KB compressed (774.73KB uncompressed). The next time I build in a new module 
+or do a new release, I am going to note what the size of the file becomes. My hope, and maybe this is naive, is that 
+ReactJS is **most** of that bloat, but I get to add tons of components relatively cheaply and that a much larger 
+production application would avoid overly long waiting periods for the transmission of code.
+
+**EDIT**
+
+I just added a bunch of title stuff and created a base class from which all `Page` components extend, and now the build 
+is 252.55KB compressed (787.18 uncompressed). The file I added was about 2KB in size prior to transpiling, so there is 
+a chance that transpilation blew it up to roughly 8KB in size, but there were other changes as well... so it is hard to 
+say for sure.
+
+Call me cautiously optimistic at this point!

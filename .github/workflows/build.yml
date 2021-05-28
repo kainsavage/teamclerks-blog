@@ -27,6 +27,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: us-west-1
       - run: |
-          aws s3 sync public s3://teamclerks.net
+          aws s3 sync build s3://teamclerks.net
       - run: |
           aws cloudfront create-invalidation --distribution-id E3HRHK7QR0LQ4A --paths "/*"

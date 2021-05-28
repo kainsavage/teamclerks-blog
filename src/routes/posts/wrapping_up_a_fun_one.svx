@@ -1,0 +1,60 @@
+<svelte:head>
+    <title>Wrapping Up a Fun One | TeamClerks</title>
+</svelte:head>
+
+# Wrapping Up a Fun One
+
+### Picking Up...
+
+The only thing left to do was the small one-two item runs to try and find the last dreamer
+(Monomon, but you know... it does not matter which). So, I ventured into the Waterways to collect
+the Flukenest item and the Godtuner item. One was the Grimchild, so I went back to Dirtmouth to
+fight Grimm and collect another item (garbage).
+
+Then, I started doing all the minor offshoots I could think of. The first one was to go back to the
+Abyss now that I had Shriek, but I loaded up Jonie's Blessing, Core, and Unbreakable Heart to get
+into the blue cavern first. At the Arcane Egg item I picked up Monomon, so I skipped the rest and
+benchwarped back to Dirtmouth and equipped my fighting charms and traveled to the Black Egg to end
+the Hollow Knight.
+
+All together, a very fun run. I liked getting so many progression items early as it made the world
+open to the point of having seemingly limitless possibilities. The run I did prior was so cursed,
+by comparison, that it was nice change of pace.
+
+### New Run!
+
+I still had some time before work, so I picked up a new save. This time, am I going to do a blind
+check against the spoiler log to ensure I am getting the items correctly here.
+
+For anyone looking to give it a try, the seed is `595261494`.
+
+Fury of the Fallen item was Desolate Dive, which is always a fun one since it can act like Vengeful
+Spirit and open up Greater Bauldar blocks to get into Greenpath and the Bauldar's Charm item. My
+next stop is almost always, and it is definitely when I get an early spell, the Brooding Mawlek.
+Desolate Dive makes the fight trivial - slap twice, back up to avoid the melee, come back and slap
+twice. If he does the big spit, pogo 2-3 times then DDive him. Rinse and repeat ezclap.
+Unfortunately, it was just a Hallownest Seal. From there, I go pick up the Mask Shard item via the
+Vengefly skip... and it was Monomon. So, from here the Crossroads will be infected, which means
+that I have to go to Gruzmother and collect Sly before heading up to the Stag station.
+
+The Stag item was another Hallownest Seal. I headed back to Dirtmouth to collect the item at that
+Stag and it was a Pale Ore - very nice early-game item since historically I have not had the luxury
+of Nail upgrades (last run was special) early. False Knight was a Simple Key, and his chest was a
+Charm Notch... but I do not have any charms yet.
+
+At the Ancestral Mound, I got the Tram Pass and another Pale Ore. If I can find another Pale Ore on
+the way to City of Tears, I can actually get three Nail upgrades once I am there, which is
+basically cheat-mode before Soul Sanctum or Watcher's Spire. I stopped playing here... it was time
+for work.
+
+### Next Time
+
+I, actually, have a few ways I can go, at the moment. I need to double-back to Dirtmouth at some
+point to see what Sly has, but I can go Greenpath or Resting Grounds since I have Desolate Dive and
+the Tram Pass. Greenpath has a *lot* of items in it, but sort of expects that you have Mouthwing
+Cloak for several of them (Thorns of Agony item, for example). Resting Grounds with Desolate Dive
+is pretty easily four items (maybe five... I can't remember how many are accessible in the graves
+before picking up Monarch Wings or Mantis Claw). I will probably do Dirtmouth, then Resting
+Grounds, then Greenpath and figure it out from there.
+
+Cheers!
