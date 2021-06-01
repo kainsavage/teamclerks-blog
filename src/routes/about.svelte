@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>About | TeamClerks</title>
+</svelte:head>
+
 <h1>About</h1>
 <p>
     TeamClerks is an entity I founded around 2001. Originally, it was a
