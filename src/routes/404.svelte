@@ -1,6 +1,6 @@
-<script>
-    import '../app.css';
-</script>
+<svelte:head>
+    <title>404 | TeamClerks</title>
+</svelte:head>
 
 <div>
     <h1>OOPS!</h1>
