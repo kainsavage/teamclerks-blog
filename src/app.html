@@ -8,6 +8,16 @@
 		<script defer src="/prism.js"></script>
 
 		%svelte.head%
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDWR4MP7VP"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-JDWR4MP7VP');
+		</script>
 	</head>
 	<body>
 		<div id="svelte">%svelte.body%</div>

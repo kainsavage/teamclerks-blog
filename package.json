@@ -1,5 +1,5 @@
 {
-  "name": "TeamClerks.net Blog",
+  "name": "TeamClerksBlog",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
