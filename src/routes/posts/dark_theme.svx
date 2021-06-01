@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Dark Theme | TeamClerks</title>
+</svelte:head>
+
 # Dark Theme
 
 I am not a designer.

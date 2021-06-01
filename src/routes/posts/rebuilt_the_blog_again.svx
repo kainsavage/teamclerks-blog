@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Rebuilt the Blog Again | TeamClerks</title>
+</svelte:head>
+
 # Rebuilt the Blog Again
 
 As the title suggests, and as any observer can tell, I have rebuilt this blog... again.

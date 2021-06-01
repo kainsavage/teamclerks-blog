@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Some Thoughts on Unicorns | TeamClerks</title>
+</svelte:head>
+
 ### Some Thoughts on Unicorns
 
 As far as I can tell, all developers have a notion of getting ridiculously wealthy by starting the next big thing -

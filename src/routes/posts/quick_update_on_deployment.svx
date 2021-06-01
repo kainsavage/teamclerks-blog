@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Quick Update on Deployment | TeamClerks</title>
+</svelte:head>
+
 # Quick Update on Deployment
 
 ## Github Actions

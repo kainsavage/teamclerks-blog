@@ -1,3 +1,7 @@
+<svelte:head>
+    <title> | TeamClerks</title>
+</svelte:head>
+
 # Not Much Going on...
 
 I have not had a lot of time to work on my blog in the last few days, and I have not written much since getting Let's

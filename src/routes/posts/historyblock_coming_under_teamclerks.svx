@@ -1,3 +1,7 @@
+<svelte:head>
+    <title> | TeamClerks</title>
+</svelte:head>
+
 # HistoryBlock Coming Under TeamClerks
 
 I have added a new topnav link to a dedicated page about HistoryBlock, an addon I wrote for Firefox years ago. With the

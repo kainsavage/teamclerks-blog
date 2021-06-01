@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>We Secure, Baby! | TeamClerks</title>
+</svelte:head>
+
 # We Secure, Baby!
 
 I played with [Let's Encrypt](https://letsencrypt.org/) and eventually got it working, as well as all the correct

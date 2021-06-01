@@ -1,3 +1,7 @@
+<svelte:head>
+    <title> | TeamClerks</title>
+</svelte:head>
+
 # Hello, World!
 
 This is the first post of my blog.

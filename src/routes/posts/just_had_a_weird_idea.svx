@@ -1,3 +1,7 @@
+<svelte:head>
+    <title> | TeamClerks</title>
+</svelte:head>
+
 # Just Had a Weird Idea
 
 This blog is built on GatsbyJS, which is a static site generator. The underlying blog posts that I write are just

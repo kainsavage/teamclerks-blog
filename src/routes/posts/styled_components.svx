@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Styled Components | TeamClerks</title>
+</svelte:head>
+
 # Styled Components
 
 I am in the midst of writing a React best practices document for work and I came upon the notion of styling in React

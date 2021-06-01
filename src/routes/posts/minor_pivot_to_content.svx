@@ -1,3 +1,7 @@
+<svelte:head>
+    <title> | TeamClerks</title>
+</svelte:head>
+
 # Minor Pivot to Content
 
 ### Been a While!

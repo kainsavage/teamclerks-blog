@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Deployed the Blog | TeamClerks</title>
+</svelte:head>
+
 # Deployed the Blog
 
 Because Gatsby builds into a fully static site, my needs have changed. I no longer need an actual running instance to

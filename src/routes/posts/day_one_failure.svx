@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Day One Failure | TeamClerks</title>
+</svelte:head>
+
 # Day One Failure
 
 Well, I did not write anything the last few days after proclaiming I would... not a good start.

@@ -1,6 +1,8 @@
-# This is Going to be a Long One
+<svelte:head>
+    <title>This is Going to be a Long One | TeamClerks</title>
+</svelte:head>
 
-# The Long One
+# This is Going to be a Long One
 
 ## Prologue
 

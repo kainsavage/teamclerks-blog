@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Web Frameworks | TeamClerks</title>
+</svelte:head>
+
 # Web Frameworks
 
 ## Preface
