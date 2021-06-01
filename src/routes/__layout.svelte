@@ -54,7 +54,7 @@
 		width: 100%;
 	}
 	.left-nav .post a {
-		width: 80%;
+		width: 70%;
 		font-size: 0.8em;
 		white-space: nowrap;
 		overflow: hidden;
