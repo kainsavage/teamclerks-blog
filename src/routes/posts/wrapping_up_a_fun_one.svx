@@ -1,3 +1,8 @@
+---
+title: Wrapping Up a Fun One
+date: 2021-02-12
+---
+
 <svelte:head>
     <title>Wrapping Up a Fun One | TeamClerks</title>
 </svelte:head>

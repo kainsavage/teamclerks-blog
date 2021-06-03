@@ -1,3 +1,8 @@
+---
+title: Rebuilt the Blog Again AGAIN
+date: 2021-06-01
+---
+
 <svelte:head>
     <title>Rebuilt the Blog Again AGAIN | TeamClerks</title>
 </svelte:head>

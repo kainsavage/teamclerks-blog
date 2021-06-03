@@ -1,3 +1,8 @@
+---
+title: Day One Failure
+date: 2019-09-04
+---
+
 <svelte:head>
     <title>Day One Failure | TeamClerks</title>
 </svelte:head>

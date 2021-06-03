@@ -1,9 +1,25 @@
+<script context="module">
+	import {order_by_date_str_desc} from "$lib/utils/string_helper.js";
+
+	export async function load() {
+		const posts = import.meta.globEager('./posts/*.svx');
+		const postsList = Object.values(posts);
+		const postsMeta = postsList.map(post => post.metadata);
+
+		return {
+			props: {
+				posts: postsMeta.sort(order_by_date_str_desc),
+			},
+		};
+	}
+</script>
+
 <script>
 	import Header from '$lib/components/header.svelte';
-	import {slugify} from "$lib/utils/string_helper.js";
+	import {slugify, format_date_string} from "$lib/utils/string_helper.js";
 	import '../app.css';
 
-	import posts from "./posts/posts.json";
+	export let posts;
 </script>
 
 <Header />
@@ -11,10 +27,10 @@
 	<div class="left-nav">
 		<h5>Posts</h5>
 		<ul>
-			{#each posts.posts as post}
+			{#each posts as post}
 				<li class="post">
-					<a href="/posts/{slugify(post.name)}">{post.name}</a>
-					<span>{post.date}</span>
+					<a href="/posts/{slugify(post.title)}">{post.title}</a>
+					<span>{format_date_string(new Date(post.date))}</span>
 				</li>
 			{/each}
 		</ul>

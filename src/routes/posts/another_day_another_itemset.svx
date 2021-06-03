@@ -1,3 +1,8 @@
+---
+title: Another Day Another Itemset
+date: 2021-02-11
+---
+
 <svelte:head>
     <title>Another Day Another Itemset | TeamClerks</title>
 </svelte:head>

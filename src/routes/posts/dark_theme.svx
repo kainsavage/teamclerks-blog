@@ -1,3 +1,8 @@
+---
+title: Dark Theme
+date: 2019-05-03
+---
+
 <svelte:head>
     <title>Dark Theme | TeamClerks</title>
 </svelte:head>

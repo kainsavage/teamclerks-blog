@@ -1,5 +1,10 @@
+---
+title: Minor Pivot to Content
+date: 2021-02-09
+---
+
 <svelte:head>
-    <title> | TeamClerks</title>
+    <title>Minor Pivot to Content | TeamClerks</title>
 </svelte:head>
 
 # Minor Pivot to Content

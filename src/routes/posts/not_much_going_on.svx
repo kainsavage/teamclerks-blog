@@ -1,5 +1,10 @@
+---
+title: Not Much Going on
+date: 2017-06-02
+---
+
 <svelte:head>
-    <title> | TeamClerks</title>
+    <title>Not Much Going on... | TeamClerks</title>
 </svelte:head>
 
 # Not Much Going on...

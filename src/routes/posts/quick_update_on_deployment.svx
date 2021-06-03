@@ -1,3 +1,8 @@
+---
+title: Quick Update on Deployment
+date: 2021-02-10
+---
+
 <svelte:head>
     <title>Quick Update on Deployment | TeamClerks</title>
 </svelte:head>

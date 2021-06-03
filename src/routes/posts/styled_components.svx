@@ -1,3 +1,8 @@
+---
+title: Styled Components
+date: 2019-05-03
+---
+
 <svelte:head>
     <title>Styled Components | TeamClerks</title>
 </svelte:head>

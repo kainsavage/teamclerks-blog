@@ -1,3 +1,8 @@
+---
+title: Some Thoughts on Unicorns
+date: 2019-09-05
+---
+
 <svelte:head>
     <title>Some Thoughts on Unicorns | TeamClerks</title>
 </svelte:head>

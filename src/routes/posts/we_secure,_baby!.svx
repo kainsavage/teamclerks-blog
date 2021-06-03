@@ -1,3 +1,8 @@
+---
+title: We Secure, Baby!
+date: 2017-05-18
+---
+
 <svelte:head>
     <title>We Secure, Baby! | TeamClerks</title>
 </svelte:head>

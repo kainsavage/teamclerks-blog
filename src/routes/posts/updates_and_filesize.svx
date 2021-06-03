@@ -1,3 +1,8 @@
+---
+title: Updates and Filesize
+date: 2017-06-08
+---
+
 <svelte:head>
     <title>Updates and Filesize | TeamClerks</title>
 </svelte:head>

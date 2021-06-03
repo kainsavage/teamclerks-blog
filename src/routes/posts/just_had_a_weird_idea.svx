@@ -1,5 +1,10 @@
+---
+title: Just Had a Weird Idea
+date: 2019-05-01
+---
+
 <svelte:head>
-    <title> | TeamClerks</title>
+    <title>Just Had a Weird Idea | TeamClerks</title>
 </svelte:head>
 
 # Just Had a Weird Idea
