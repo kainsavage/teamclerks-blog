@@ -13,7 +13,7 @@ I deployed the latest version of my blog software this morning, and I improved a
 
 - Moved around some of the logged-in links (none of you will see these, yet) for a better layout
 - Added some preferences functionality (none of you will see this, yet)
-- Added an [About](/about) page which has a very short description of what this site is
+- Added an [About](/) page which has a very short description of what this site is
 - Added better styling for blockquote blocks
 - Enabled `gzip` compression in `nginx`
 
