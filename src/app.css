@@ -460,6 +460,7 @@ blockquote {
 	padding-right: 1.45rem;
 	padding-left: 1.45rem;
 	margin: 0;
+	margin-bottom: 0.85rem;
 }
 form {
 	margin-left: 0;
@@ -547,6 +548,9 @@ li > ul {
 }
 blockquote *:first-child {
 	margin-top: 0;
+}
+blockquote > p {
+	margin-bottom: 0;
 }
 li *:first-child {
 	margin-top: 0;
