@@ -1,0 +1,109 @@
+---
+title: The Incredibles Makes No Sense
+date: 2021-09-17
+---
+
+<svelte:head>
+    <title>The Incredibles Makes No Sense</title>
+</svelte:head>
+
+### The Incredibles Makes No Sense
+
+##        
+
+There, I said it.
+
+#### Preface
+
+During the pandemic, instead of visiting friends or family, we fell into a routine of watching movies on weekend nights.
+My son has been particularly fond of The Incredibles, and I cannot blame him. When I was in college, the Computer
+Graphics class took a "field trip" to the movies to watch it, and while I suspect there was definitely some things to
+learn about computer graphics in the film, I was struck more by the creative storytelling and character development. I
+have always been a romantic when it comes to stories of love, protection of both the self and others, and shonen-style
+fight scenes of breathtaking intensity. Two scenes in particular stick out to me as being the peak each character's
+emotional experience and growth: the plane scene in which Helen Parr, a.k.a. ElastiGirl, is drastically pleading with an
+unknown assailant to call off missiles fired upon them, and the scene in which Bob Parr, a.k.a. Mr. Incredible,
+confesses his lack of strength in his previous loss of his family. These scenes are absolutely fantastic, emotional, and
+deeply connects the characters with the viewer.
+
+This is not why we are here. We are here because the movie—its underlying world-building, the rules by which its
+universe operates, and the Supers and their powers—is full of logical contradictions.
+
+#### The Incredibles
+
+The movie opens with several Supers being interviewed about their opinions on the Supers' anonymity. Unsurprisingly, all
+the interviewees are in favor of remaining anonymous behind their masks for one reason or another. ElastiGirl, for one,
+points out that everyday life would be too difficult without her ElastiGirl persona being a firewall against the public
+knowing her true identity. This scene is important because it establishes a very important fact about the universe: no
+one is able to determine who someone is when they are in their disguise (their SuperSuit). This is some hand waving that
+we, the viewer, simply allow because it is a story about superheroes, and we collectively allow such silliness. However,
+the fact that a mask provides *total anonymity* for the bearer is the basis for many of the inconsistencies in their
+world.
+
+In the next scene, we see mild-mannered Bob Parr driving along, looking dapper in a tuxedo in his everyday sedan. He is
+notified that there is a high-speed chase in progress, decides he has time to help, and switches into his SuperSuit to
+give chase. Ultimately, this chase culminates with Mr. Incredible rescuing a cat from a tree and then foiling the
+getaway of the bad guys by smashing the tree into the road causing them to crash. This scene is not very important - it
+only establishes that the Supers are perhaps vigilante crime-fighters. The next scene reframes the previous scene: the
+police thank Mr. Incredible for his help in the chase thus legitimizing the Supers' status as more of a helping hand to
+existing law enforcement. This is actually truly remarkable! Imagine something similar in our universe where there is a
+high-speed chase going on, and I get out ahead of them and set up a trap that will spring and immediately crash the bad
+guys' car in a similar fashion. They may survive, but in our world I am definitely going to jail and probably being sued
+for the physical damages I caused as a part of the capture. It is not clear, from this point in the film, why the police
+would appreciate such help; however, at this point in the film a good guess would be simply "because they have
+super-powers."
+
+The next important scene is when Mr. Incredible arrives at the church. He takes off his mask and becomes Bob Parr again
+just before entering the main hall where Helen Truax is waiting to be wed to Bob. This scene further establishes that
+masks provide perfect anonymity, but more importantly it shows that there is a culture among Supers where some are "out"
+amongst other supers while some remain protected by their Super identity as some Supers are unmasked like Bob and Helen
+while others remain masked. In fact, the priest overseeing the event is also unmasked, which raises a few questions like
+"is the priest a Super?" and "if he isn't a Super, does he only know Helen and Bob?" Personally, I find that it would be
+interesting if the priest was not a Super and simply knew Bob and Helen, and while he is presiding over the ceremony he
+is thinking "Wow! Why are Bob and Helen friends with so many Supers!?" This interpretation would, again, solidify the
+notion that masks provide perfect anonymity, but it is based in speculation, so it should be taken with a grain of salt.
+
+Prior to Mr. Incredible arriving at the church, he foiled an attempted suicide and badly injured the victim in the
+process. The next scene shows the victim filing suit against Mr. Incredible claiming damages and mental harm. It
+establishes that the government actually has some agreement with certain Supers that allows them to fight crime, but
+provides financial assistance in cleanup and whatnot incurred in misadventure such as these. However, the Supers are
+super... why would they enter such an agreement except out of good faith with the government and the populace at large?
+On the one hand, it would be a good faith act and establish relations with the community, and it would also give the
+government some sway over how Supers react to crimes. It is later established that there are managers for Supers who are
+tasked with relocating Supers, handling cleanup of disasters, and general governmental paperwork. This all makes sense
+based on what we have already seen: the police put up with the Supers acting as they do because they are
+government-sanctioned. It plays similarly to when SWAT shows up at a scene that local law enforcement really cannot
+handle on their own.
+
+Buuuuuuuuuuuuuut in the next scene, the government effectively outlaws the Supers, nullifying the agreement that their
+actions are government-sanctioned. This is where the universe stops making sense. We know that in our own universe that
+the simple act of making something illegal *does not* stop all from performing the now-illegal action. Similarly, the
+Supers in the Incredibles universe do not fully accept the new law and stop entirely. We pan to many years in the future
+wherein mild-mannered Bob Parr is working at an insurance agency, seemingly having accepted the fate of no longer being
+a Super. However, a few scenes later he is performing illegal Super actions with Frozone in saving people from a burning
+building. This is important in showing the contradictions; unlike the "mask rule" which appears to be absolute, this
+man-made rule outlawing Supers is just that and can be ignored.
+
+Also, outlawing Supers cannot help the fact that bad guys with superpowers still exist. Skipping ahead to the second
+movie, it is explained that the government has non-Super protections in place to deal with these villains. Insurance to
+repair and replace, presumably some agency to track and attempt to arrest, etc. However, this raises an interesting
+thought experiment: do the Supers perform hero work out of a sense of justice that can be ignored? If, for instance, a
+Super like Mr. Incredible were in a situation where a Bad Guy Super suddenly started rampaging, *could* he turn the
+other way and let the authorities handle it? If so, then his sense of justice is not absolute, and it would imply
+something far darker. Imagine you are a young Super, and you have only just come of age (or however they determine this)
+and are ready to begin hero work when the country outlaws your chosen profession. A young and impressionable Super might
+turn to crime instead of getting a desk job. Think about it: these Supers are tantamount to Gods to regular normal
+humans. Why *would* any of them want to take a desk job instead of running the show? Using their powers in society has
+essentially been outlawed anyway, and if one is going to be an outlaw, why not be a full-blown outlaw; who could stop
+you?
+
+This may have even been happening in their universe; we have no real way of knowing. However, it does seem like
+everything in society is functioning like normal. In the newspaper Bob reads about Gazerbeam's mild-mannered persona's
+disappearance, we do not read *anything* that even resembles a Super attack against a bank or holding people hostage,
+but such occurrences are made to feel commonplace. Edna Mode, while giving a very spirited speech about the dangers of
+capes to Supers, illustrates how ubiquitous the Supers and their enemies are. We are given many examples of the Supers
+reminiscing about times that Bad Guys would "start monologuing" which suggests this happens to all Supers all the time.
+So, why did the Supers comply? If their core beliefs said that they should be fighing crime, then why did they not
+continue as outlaws? We see that Mr. Incredible and Frozone both do so but under the condition of anonymity, but we do
+not see Gazerbeam or some other solo Super simply acting the vigilante hero and there surely should have been a couple.
+
