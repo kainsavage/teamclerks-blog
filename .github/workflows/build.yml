@@ -1,0 +1,32 @@
+on: push
+
+name: Deploy to Amazon S3
+
+jobs:
+  build:
+    environment: Teamclerks.net
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+
+      - name: Deploy
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+          aws-region: us-west-1
+      - run: |
+          aws s3 sync build s3://teamclerks.net
+      - run: |
+          aws cloudfront create-invalidation --distribution-id E3HRHK7QR0LQ4A --paths "/*"
