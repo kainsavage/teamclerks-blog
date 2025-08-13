@@ -26,7 +26,38 @@ jobs:
         run: npm run lint
 
       - name: Build
-        run: npm run build --if-present
+        env:
+          NODE_ENV: production
+          CI: true
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          echo "Checking build output..."
+          ls -la build/
+          echo "Checking that individual HTML files were generated..."
+          expected_files=("hello-world.html" "testing-all-the-markdown.html" "about.html" "archive.html")
+          for file in "${expected_files[@]}"; do
+            if [ -f "build/$file" ]; then
+              echo "✅ $file exists"
+            else
+              echo "❌ $file missing!"
+              exit 1
+            fi
+          done
+          echo "Checking metadata in hello-world.html..."
+          if grep -q 'content="https://blog.teamclerks.net/hello-world"' build/hello-world.html; then
+            echo "✅ Production URLs are correct!"
+          else
+            echo "URL not found - checking for placeholder..."
+            if grep -q 'content="http://sveltekit-prerender/hello-world"' build/hello-world.html; then
+              echo "❌ WARNING: Placeholder URL found!"
+              exit 1
+            else
+              echo "❌ No URL found in metadata"
+              exit 1
+            fi
+          fi
 
       - name: Deploy
         uses: aws-actions/configure-aws-credentials@v4

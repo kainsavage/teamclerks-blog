@@ -2,6 +2,9 @@ import { json } from '@sveltejs/kit';
 import type { Post } from '../../../lib/types';
 import { processHeroImage } from '../../../lib/utils';
 
+// Enable prerendering for this API route
+export const prerender = true;
+
 async function getPosts() {
 	let posts: Post[] = [];
 
