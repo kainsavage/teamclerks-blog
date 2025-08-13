@@ -15,7 +15,8 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'build',
-			assets: 'build'
+			assets: 'build',
+			fallback: undefined  // This ensures individual HTML files are served
 		}),
 		paths: {
 			base: ''
