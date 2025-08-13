@@ -1,19 +1,25 @@
-import {mdsvex} from "mdsvex";
-import mdsvexConfig from "./mdsvex.config.cjs";
-import static_adapter from "@sveltejs/adapter-static";
+import { mdsvex } from 'mdsvex';
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	extensions: ['.md']
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		mdsvex(mdsvexConfig),
-	],
-	extensions: [".svelte", ...mdsvexConfig.extensions],
+	// Consult https://svelte.dev/docs/kit/integrations
+	// for more information about preprocessors
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-		router: false,
-		adapter: static_adapter(),
-	}
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: 'index.html'
+		})
+	},
+	extensions: ['.svelte', '.svx', '.md']
 };
 
 export default config;

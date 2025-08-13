@@ -1,0 +1,33 @@
+---
+title: Music in Games and the Effect on Gameplay and Storytelling
+description: Where I discuss music in video games, the effect it has on the player, and the nostalgia it evokes.
+date: '2024-07-18'
+hero: music-in-games-and-the-effect-on-gameplay-and-storytelling.webp
+bluesky_post_id: 3kvtuwj32ys2g
+categories:
+  - gaming music
+  - video games
+  - games
+  - music
+  - nostalgia
+  - ambience
+published: true
+---
+
+On Blueskee, I [hinted at](https://bsky.app/profile/teamclerks.net/post/3ksq5rlzlx22m) playing Final Fantasy VI with my son after he enjoyed our play-through of Breath of Fire II (which was an absolutely ridiculous game... I WAS going to write a retrospective on it, but suffice to say that it was bad design, bad planning, okay music, and a story that was crazier that the [FFIV Space Whale](https://uca1474beb74928ad72d31c1a627.previews.dropboxusercontent.com/p/thumb/ACUZkCeIsWWUCRwkl5izpbChjVrtI39Y4SGI9rSabRkiQroSdoA_kAK3v3NdAJKTK2PvXOrCG64PlAsU-djIFWtyOCl8Y6lIK6x09Z4Pdc0omvfbt93WBwh8jKy5xrSYjy9BL6Moy71BTafEuexZXd0oHa5RICDBq7KJjTDQVh78PSQc67pOu8WDdqEA9NXLlH7Byzg8i6hDktDn22y0lcWSA_-s7TtIHvUwYyaj3_7bhP30BaxDqbA7K4za-v5TEaOOr3Y08BnmGZ9fY6iNNDSqReDLc4VQNeE3za1zML_T827CSVrLXkWNfKYGKaj7BToo5lT0_YcHws8hcdiqpNFbzODYPK4f4Wn0zhk39Jd-l3Gwu5kE7oErDFux3GNRDSA/p.jpeg?is_prewarmed=true)). We had an absolute blast fighting our way through the game, collecting the rare items and characters, and eventually beating Kefka. I have always loved FFVI since I was young, and playing it again as an adult I am struck by how much of the nostalgia I feel is connected not to the gameplay or story, but to the music. When I would bring up how I loved a certain song or started humming along, my boi would chime in with how much he enjoyed the song too - how "oh, this song is sick!" (He's seven)
+
+Anyway, I remember playing FFVI every weekend during my summers. I would try out new and crazy builds or characters, or I would endevour to get all of Gau's Rages, or all of Strago's Blue Magics. Remember, these were the VERY early days of the internet, and information was not as readily available as it is today. Everything that I could look up (when I was at my dad's work where they had the internet) was a smattering of statements of experience, rumors, or outright lies on message boards. I tried every rumor I came across to either prevent General Leo's death or resurrect him after the fact. My play-throughs of the game, being a kid, were usually long because I would forget how to do something or my party made no sense (I was very fond of Sabin+Cyan+Umaro+Gogo for a fighter-heavy team, and the only skills I would really use were Blitzes). And so, I probably logged a few hundred hours in the game before my teenage years. That is a LOT of time spent listening to the music.
+
+Looking back, while I admit a lot of my adoration is due to nostalgia, I genuinely do believe that FFVI's music is great for the game. I think that each setting having its own theme that fits the story being told is perfect. It is very reminiscent of a play where the musical scores have to fit the scene perfectly. Take the Esper Cave as an example, a low eerie-sounding horn instrument (I'm stretching a bit for the 16-bit era here, but we can pretend) sets the tone with an uneasy/unknowable melody that steadily grows to the crescendo with the piccolo which is sharp and fills the player with tense feelings about what is happening. The two "movements" in the Esper Cave Theme play against one another - the slow foreboding against the piercing danger.
+
+I am not really very musically inclined - I took a decade of piano lessons including some theory, so I can at least speak a little about music in general - but I never took musical theory proper, or any classes in high school or college to further my education on the matter. However, I am a gamer, and I can say with certainty that I know what the music makes me _feel_ when I hear it, and those feelings translate into the experience with the game play. Final Fantasy games have always done this very effectively. The stories they tell are entwined with emotional musical pieces that just intensify the overall experience.
+
+It is a little bit funny - I started this blog post a few months ago because I wanted to lay out an argument for Final Fantasy VI being told as a stage play. I was still playing the game with my son when the thought came to me: how very like Les Mis or so many of the Cirque du Soleil plays are told. The characters - not just the protagonists, but the antagonists and side-characters as well - would speak toward the player, like a stage play. It just made so much sense to me! So, I started doing some research on how I wanted to write about it, and it turns out that I am essentially the last horse to cross the finish-line on this one, and the entire internet already considers FFVI a stage play.
+
+Well, I still wanted to write about Final Fantasy. So, I back-burnered this post for a bit. Then my son and I started playing Final Fantasy IX (the remake on Steam is very good - many quality of life improvements). Again, I was struck by how much the music moved me. In retrospect, it makes sense as it is basically the love letter from [Hironobu Sakaguchi](https://en.wikipedia.org/wiki/Final_Fantasy_IX) to the fans who always wanted his vision of the fantasy-themed, upbeat, fun, adventure game. I am hard-pressed to deliver on which is my favorite Final Fantasy... currently, as we are playing through it, I would have to lean on FFIX.
+
+I have taken to listening to the OSTs while doing development work - I find that music without lyrics works best to help keep me focused (Where my ADHD folks?). So, it is now Summer Break for my son, and I walk him to his various sports camps that he is enrolled in every morning before heading to work. Today, I woke up with a song in my head. I was whistling it while I showered and when I was getting dressed, and as we left the house and started walking my son asked "can you whistle that cool song again?" And so, I will leave you with the opening theme to Final Fantasy IX, one of my favorite games and soundtracks, and a love that I am passing on to my boi.
+
+<iframe height="576" width="972![](https://blog-teamclerks-net-images.s3.amazonaws.com/b0222421-cbae-4414-b6d0-bdd900ee6836.webp)" src="https://www.youtube.com/embed/BC7Gj3ecB-g" title="Final Fantasy IX (Opening in HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[Come get nostalgic with me in the comments!](https://bsky.app/profile/teamclerks.net/post/3kvtuwj32ys2g)

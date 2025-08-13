@@ -1,25 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/prism.css" />
-		<script defer src="/prism.js"></script>
-
-		%svelte.head%
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDWR4MP7VP"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'G-JDWR4MP7VP');
-		</script>
+		<meta property="twitter:domain" content="blog.teamclerks.net" />
+		<script type="text/javascript" src="/scripts/prism.js" async></script>
+		%sveltekit.head%
 	</head>
-	<body>
-		<div id="svelte">%svelte.body%</div>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
