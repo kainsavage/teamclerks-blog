@@ -68,4 +68,4 @@ jobs:
       - run: |
           aws s3 sync build s3://teamclerks.net
       - run: |
-          aws cloudfront create-invalidation --distribution-id E7IRWM9ZILYWF --paths "/*"
+          aws cloudfront create-invalidation --distribution-id EHWI3ENCZ21KS --paths "/*"
