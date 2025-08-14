@@ -1,3 +1,6 @@
+// Enable prerendering for this route
+export const prerender = true;
+
 export async function load() {
 	try {
 		// @ts-expect-error - mdsvex handles markdown imports at runtime

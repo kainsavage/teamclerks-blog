@@ -23,8 +23,8 @@
 		<nav class="flex items-center">
 			<div class="flex w-full justify-between gap-4 md:w-fit">
 				<!-- New Post link would go here when authenticated -->
-				<a href="/about" class="text-inherit no-underline hover:no-underline">About</a>
-				<a href="/archive" class="text-inherit no-underline hover:no-underline">Archive</a>
+				<a href="/about/" class="text-inherit no-underline hover:no-underline">About</a>
+				<a href="/archive/" class="text-inherit no-underline hover:no-underline">Archive</a>
 				<a href="mailto:kain@teamclerks.net" class="text-inherit no-underline hover:no-underline">
 					Contact
 				</a>
@@ -42,8 +42,8 @@
 
 			<!-- Mobile Navigation -->
 			<nav class="flex w-full justify-between gap-4 pb-2 md:hidden">
-				<a href="/about" class="text-inherit no-underline hover:no-underline">About</a>
-				<a href="/archive" class="text-inherit no-underline hover:no-underline">Archive</a>
+				<a href="/about/" class="text-inherit no-underline hover:no-underline">About</a>
+				<a href="/archive/" class="text-inherit no-underline hover:no-underline">Archive</a>
 				<a href="mailto:kain@teamclerks.net" class="text-inherit no-underline hover:no-underline">
 					Contact
 				</a>

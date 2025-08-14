@@ -35,22 +35,35 @@ jobs:
         run: |
           echo "Checking build output..."
           ls -la build/
-          echo "Checking that individual HTML files were generated..."
-          expected_files=("hello-world.html" "testing-all-the-markdown.html" "about.html" "archive.html")
-          for file in "${expected_files[@]}"; do
-            if [ -f "build/$file" ]; then
-              echo "✅ $file exists"
+          echo "Checking that folder structure was generated..."
+          expected_folders=("hello-world" "testing-all-the-markdown" "about" "archive")
+          for folder in "${expected_folders[@]}"; do
+            if [ -d "build/$folder" ]; then
+              echo "✅ $folder/ directory exists"
+              if [ -f "build/$folder/index.html" ]; then
+                echo "✅ $folder/index.html exists"
+              else
+                echo "❌ $folder/index.html missing!"
+                exit 1
+              fi
             else
-              echo "❌ $file missing!"
+              echo "❌ $folder/ directory missing!"
               exit 1
             fi
           done
-          echo "Checking metadata in hello-world.html..."
-          if grep -q 'content="https://blog.teamclerks.net/hello-world"' build/hello-world.html; then
+          echo "Checking that 404.html exists..."
+          if [ -f "build/404.html" ]; then
+            echo "✅ 404.html exists"
+          else
+            echo "❌ 404.html missing!"
+            exit 1
+          fi
+          echo "Checking metadata in hello-world/index.html..."
+          if grep -q 'content="https://blog.teamclerks.net/hello-world"' build/hello-world/index.html; then
             echo "✅ Production URLs are correct!"
           else
             echo "URL not found - checking for placeholder..."
-            if grep -q 'content="http://sveltekit-prerender/hello-world"' build/hello-world.html; then
+            if grep -q 'content="http://sveltekit-prerender/hello-world"' build/hello-world/index.html; then
               echo "❌ WARNING: Placeholder URL found!"
               exit 1
             else

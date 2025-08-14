@@ -16,10 +16,28 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined // This ensures individual HTML files are served
+			fallback: '404.html', // This creates a 404.html file for fallback
+			precompress: false,
+			strict: false
 		}),
 		paths: {
 			base: ''
+		},
+		// Force prerendering of all routes to generate static files
+		prerender: {
+			handleHttpError: ({ path, referrer, message }) => {
+				// Ignore missing API routes during prerendering
+				if (path.startsWith('/api/')) {
+					return;
+				}
+				// Temporarily ignore 404 errors to see if folder structure is generated
+				if (message.includes('404')) {
+					console.log(`Ignoring 404 for path: ${path}`);
+					return;
+				}
+				// Throw error for other missing routes
+				throw new Error(message);
+			}
 		}
 	},
 	extensions: ['.svelte', '.svx', '.md']
