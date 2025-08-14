@@ -25,7 +25,7 @@ const config = {
 		},
 		// Force prerendering of all routes to generate static files
 		prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
+			handleHttpError: ({ path, message }) => {
 				// Ignore missing API routes during prerendering
 				if (path.startsWith('/api/')) {
 					return;
