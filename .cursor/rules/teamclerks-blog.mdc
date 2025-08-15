@@ -1,0 +1,78 @@
+---
+alwaysApply: true
+---
+
+### Image Processing Pipeline
+- **Hero Images**: Stored in `static/images/`
+- **Automatic Processing**: The `scripts/process-images.js` script generates:
+  - Thumbnails (`_thumb.webp`) - 320px max dimension
+  - Blurred placeholders (`_blurred.webp`) - 32px with blur effect
+- **Build Integration**: Images are processed during `npm run build`
+- **Manual Processing**: Run `npm run process-images` to regenerate all images
+
+### Routing Structure
+- **Home Page**: `/` - Shows latest 3 posts
+- **Individual Posts**: `/[slug]` - Dynamic routes for each blog post
+- **Archive**: `/archive` - Shows all posts
+- **About**: `/about` - Static about page
+- **API**: `/api/posts` - JSON endpoint for all published posts
+
+### Key Files and Their Purposes
+- `src/lib/types.ts` - TypeScript interfaces for Post and Categories
+- `src/lib/utils.ts` - Utility functions for date formatting, image processing, and excerpt extraction
+- `src/routes/api/posts/+server.ts` - API endpoint that processes markdown files and returns post data
+- `src/routes/[slug]/+page.ts` - Dynamic route loader for individual blog posts
+- `svelte.config.js` - SvelteKit configuration with mdsvex and static adapter setup
+
+## Development Guidelines
+
+### Adding New Blog Posts
+1. Create a new `.md` file in `src/posts/` with the slug as filename
+2. Add proper frontmatter with all required fields
+3. Set `published: true` when ready to publish
+
+### Image Guidelines
+- **Formats**: Prefer WebP for better compression
+- **Hero Images**: Should be high quality, ideally 1200px+ wide
+- **File Naming**: Use kebab-case (e.g., `my-blog-post-hero.webp`)
+- **Processing**: Always run image processing after adding new hero images
+
+### Code Style
+- **TypeScript**: Use strict typing, define interfaces in `src/lib/types.ts`
+- **Components**: Use Svelte 5 syntax, prefer composition over inheritance
+- **Styling**: Use Tailwind CSS classes, avoid custom CSS when possible
+- **Performance**: Leverage SvelteKit's prerendering for static generation
+
+### Build Process
+1. **Development**: `npm run dev` - Starts development server
+2. **Image Processing**: `npm run process-images` - Generates thumbnails and blurred images
+3. **Build**: `npm run build` - Processes images and builds static site
+4. **Preview**: `npm run preview` - Serves built site locally
+
+### SEO and Performance
+- **Prerendering**: All routes are prerendered for optimal performance
+- **Meta Tags**: Each post includes title, description, and hero image for social sharing
+- **Image Optimization**: Automatic generation of optimized thumbnails and blurred placeholders
+- **Static Generation**: Site is fully static for fast loading and good SEO
+
+### Categories System
+Current categories: `sveltekit`, `svelte`, `markdown`, `parsing`, `testing`, `tagging`
+- Add new categories to the `Categories` type in `src/lib/types.ts`
+- Use categories for filtering and organization
+
+### Error Handling
+- **404 Pages**: Custom error page for missing posts
+- **Image Fallbacks**: Blurred placeholders for missing hero images
+- **Build Errors**: Graceful handling of missing images during build
+
+
+### Deployment
+The site is configured for static deployment. The build process creates optimized static files in the `build/` directory.
+
+## Notes for AI Assistant
+- Always check the `Categories` type when suggesting new categories
+- Remember to update the `entries()` function when adding new posts
+- Image processing is automatic during build but can be run manually
+- The site uses SvelteKit's static adapter for full static generation
+- All posts are processed through mdsvex for markdown support
+- Hero images are optional but recommended for visual appeal

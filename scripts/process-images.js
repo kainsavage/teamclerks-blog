@@ -61,11 +61,11 @@ async function processHeroImages() {
 
 				console.log(`✓ Generated thumbnail: ${basename(thumbnailPath)}`);
 
-				// Generate blurred version (32px, highly blurred for placeholder)
+				// Generate blurred version (640px max dimension, maintain aspect ratio)
 				const blurredPath = join(imagesDir, `${name}_blurred${ext}`);
 				await sharp(imagePath)
-					.resize(32, 32, {
-						fit: 'cover',
+					.resize(640, 640, {
+						fit: 'inside',
 						withoutEnlargement: true
 					})
 					.blur(15)

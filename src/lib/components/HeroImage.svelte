@@ -32,8 +32,6 @@
 	<div class="mb-6 overflow-hidden rounded-lg {className}">
 		<div
 			class="relative bg-cover bg-center transition-opacity duration-300"
-			class:opacity-0={!imageLoaded}
-			class:opacity-100={imageLoaded}
 			style="background-image: url({blurDataUrl || src})"
 		>
 			<img
@@ -44,7 +42,9 @@
 				fetchpriority="high"
 				loading="eager"
 				decoding="async"
-				class="w-full object-cover object-center"
+				class="w-full object-cover object-center transition-opacity duration-300"
+				class:opacity-0={!imageLoaded}
+				class:opacity-100={imageLoaded}
 				onload={handleImageLoad}
 				onerror={handleImageError}
 			/>
