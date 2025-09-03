@@ -1,7 +1,7 @@
 ---
 title: Rewriting the Blog (Again) - This Time with SvelteKit
 description: Wherein I discuss yet another blog rewrite, this time using SvelteKit as a static HTML generator for better performance and developer experience
-date: '2024-08-15'
+date: '2025-08-15'
 hero: sveltekit-blog-rewrite.png
 bluesky_post_id: 3lwhqba4q3k2k
 categories:

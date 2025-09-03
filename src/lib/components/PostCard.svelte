@@ -18,7 +18,7 @@
 <div
 	class="post-card z-[120] rounded-lg border-y-2 border-transparent shadow-2xl shadow-gray-950 transition ease-in-out hover:md:scale-105 {className}"
 >
-	<a href="{post.slug}/" class="block cursor-pointer text-inherit md:max-w-[320px]">
+	<a href="/{post.slug}/" class="block cursor-pointer text-inherit md:max-w-[320px]">
 		<!-- Hero Image -->
 		{#if thumbnailUrl}
 			<div
