@@ -3,7 +3,7 @@ title: Silksong is a Real Game
 description: Wherein I celebrate the long-awaited release of Silksong.
 date: '2025-09-03'
 hero: dad-boi-silksong.png
-bluesky_post_id: asdasdasd
+bluesky_post_id: 3lxxqvfqkoc25
 categories:
   - gaming
   - metroidvania
