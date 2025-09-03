@@ -1,8 +1,8 @@
 ---
 title: Silksong is a Real Game
-description: Wherein I 
-date: '2025-09-02'
-hero: sveltekit-blog-rewrite.png
+description: Wherein I celebrate the long-awaited release of Silksong.
+date: '2025-09-03'
+hero: dad-boi-silksong.png
 bluesky_post_id: asdasdasd
 categories:
   - gaming
@@ -11,7 +11,7 @@ categories:
   - silksong
   - indie-games
   - anticipation
-published: false
+published: true
 ---
 
 I waited a few days to write this; I had to make sure that I hadn't hallucinated it.
@@ -51,3 +51,7 @@ not what you were expecting. An amazing "WHAT!?" moment when you realize the pot
 been overlooking. Since playing it myself, I found a YouTuber called Skurry who played it and
 perfectly exemplifies what I'm talking about:
 <iframe width="576" height="972" src="https://www.youtube.com/embed/EODDbJym6SE?si=SahRIMclEgQH_JvC&amp;start=761" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+While I am purchasing Silksong on Thursday, my son and I will be enjoying it together; which means
+waiting until Saturday morning to play it. I am really looking forward to jumping into a brand new
+game completely blind, and getting lost again (this time with a partner).
