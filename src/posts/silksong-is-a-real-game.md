@@ -16,11 +16,11 @@ published: true
 
 I waited a few days to write this; I had to make sure that I hadn't hallucinated it.
 
-Silksong, the highly anticipated sequel to the hit Indie game, Hollow Knight, is going to be 
+Silksong, the highly anticipated sequel to the hit Indie game, Hollow Knight, is going to be
 released on September 4, 2025. It has been in development for almost 8 years. It has been in
-development for so long that it has become a meme. There are entire 
+development for so long that it has become a meme. There are entire
 [YouTube channels](https://www.youtube.com/@DailySilksongNews) with thousands of followers devoted
-to *whether* there was any Silksong news that day. There are literally people who played Hollow
+to _whether_ there was any Silksong news that day. There are literally people who played Hollow
 Knight in college, and since then have become doctors before Silksong's release. Finally, on
 Thursday we will all be able to pick up Silksong and learn more about the vast world of bugs that
 I know and love.
@@ -50,6 +50,7 @@ Every power-up you come across gives a sense of "huh?" but then you try it out a
 not what you were expecting. An amazing "WHAT!?" moment when you realize the potential you have
 been overlooking. Since playing it myself, I found a YouTuber called Skurry who played it and
 perfectly exemplifies what I'm talking about:
+
 <iframe width="576" height="972" src="https://www.youtube.com/embed/EODDbJym6SE?si=SahRIMclEgQH_JvC&amp;start=761" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 While I am purchasing Silksong on Thursday, my son and I will be enjoying it together; which means
