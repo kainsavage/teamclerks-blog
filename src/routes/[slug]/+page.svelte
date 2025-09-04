@@ -119,7 +119,7 @@
 	</article>
 
 	<!-- Comments Section -->
-	<div class="mt-12 border-t border-[var(--color-tan-300)] pt-8">
+	<div class="mt-4 border-t border-[var(--color-tan-300)]">
 		<CommentSection postId={data.meta.bluesky_post_id} />
 	</div>
 </div>

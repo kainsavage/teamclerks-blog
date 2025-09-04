@@ -58,7 +58,7 @@
 	</div>
 {:else if comments && AppBskyFeedDefs.isThreadViewPost(comments)}
 	<div>
-		<div class="mt-4 mb-2 flex items-center justify-between">
+		<div class="flex items-center justify-between pt-4 pb-2">
 			<a
 				class="text-2xl font-bold text-[var(--color-primary)] no-underline hover:text-[var(--color-primary)] hover:underline"
 				target="_blank"
@@ -96,7 +96,7 @@
 			</button>
 		</div>
 
-		<div class="space-y-8">
+		<div class="space-y-8 pb-8">
 			{#if !comments.replies || comments.replies.length === 0}
 				<p class="text-center">
 					Be the first to comment

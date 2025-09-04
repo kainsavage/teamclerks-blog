@@ -39,7 +39,9 @@
 				comment.post.uri
 			)}"
 		>
-			<p>{text}</p>
+			<p class="text-[var(--color-text)] no-underline hover:text-[var(--color-text)]">
+				{text}
+			</p>
 			<div class="mt-2 flex w-full max-w-[150px] flex-row items-center justify-between opacity-60">
 				<div class="flex flex-row items-center gap-1.5">
 					<svg
@@ -56,7 +58,9 @@
 					>
 						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
 					</svg>
-					<p class="text-xs">{comment.post.replyCount}</p>
+					<p class="text-xs text-[var(--color-text)] no-underline hover:text-[var(--color-text)]">
+						{comment.post.replyCount}
+					</p>
 				</div>
 				<div class="flex flex-row items-center gap-1.5">
 					<svg
@@ -76,7 +80,9 @@
 						<path d="m7 22-4-4 4-4"></path>
 						<path d="M21 13v1a4 4 0 0 1-4 4H3"></path>
 					</svg>
-					<p class="text-xs">{comment.post.repostCount}</p>
+					<p class="text-xs text-[var(--color-text)] no-underline hover:text-[var(--color-text)]">
+						{comment.post.repostCount}
+					</p>
 				</div>
 				<div class="flex flex-row items-center gap-1.5">
 					<svg
@@ -95,7 +101,9 @@
 							d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
 						></path>
 					</svg>
-					<p class="text-xs">{comment.post.likeCount}</p>
+					<p class="text-xs text-[var(--color-text)] no-underline hover:text-[var(--color-text)]">
+						{comment.post.likeCount}
+					</p>
 				</div>
 			</div>
 		</a>
