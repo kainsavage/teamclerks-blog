@@ -111,7 +111,7 @@
 					</a>
 				</p>
 			{:else}
-				{#each comments.replies as reply}
+				{#each comments.replies as reply, index (index)}
 					{#if AppBskyFeedDefs.isThreadViewPost(reply)}
 						<Comment comment={reply} />
 					{/if}
