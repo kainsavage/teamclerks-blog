@@ -1,0 +1,89 @@
+---
+title: Day One Failure
+date: '2019-09-04'
+description: Wherein I discuss GDPR regulations, their impact on startups, and why I believe they represent a flawed solution to user privacy concerns.
+categories:
+  - gdpr
+  - privacy
+  - regulation
+  - startups
+  - business
+  - technology
+published: true
+---
+
+Well, I did not write anything the last few days after proclaiming I would... not a good start.
+
+### GDPR
+
+GDPR is dumb. Honestly, it is extremely dumb. It is intended as a mechanism to enforce that large online companies
+respect the privacy of their users, but it just is not necessary.
+
+The working example goes like this - I use Facebook and I **wrongly** expect that Facebook is treating **my** data as
+private, but a news article comes out and **righly** points out that Facebook exists to make money and they have been
+selling my data all along. GDPR is a set of regulations aimed at making that process more transparent - if Facebook is
+going to sell my data, I need to agree to those terms and they must provide mechanisms for me to remove my data from
+their system upon request.
+
+Now, I am not a libertarian, but I am in favor of the free markets deciding things like this in this one particular
+case. Users are opting in to using Facebook. We are not talking about service providers of necessary services which hold
+monopoly share of the market (think water, electricity, ISPs, etc). If your electricity provider was selling your
+private information, then that would be a problem because there are no other options - if you live in Southern
+California, you probably have SCE providing you electricity and you have **zero** alternatives. However, if you are
+using Facebook and they are sharing your private data, you can delete all your private data from Facebook and move on to
+a competitor's service. You do not like that Google sells our your browsing information? Use DuckDuckGo and Firefox.
+Find a competitor who acts more aligned with your wishes. This is how the free market works.
+
+GDPR puts a lot of undue strain on startups. We have been discussing this a lot at my job, but the gist is that
+estimating the amount of effort that is required to implementing GDPR requirements is largely unknown. It will likely be
+some percentage of the overall work, but that amount seems extremely high for most startups.
+
+If you are a startup and you have exactly a half-million dollars on hand, but you have to devote 1/5 of that to
+supporting GDPR instead of the product you are trying to build, then that is a problem. Additionally, I work at a firm
+that does software development by contract - trying to explain to the CEO of a startup that their budget needs to be X%
+larger than they planned in order to support GDPR (something which will never show value to **them**) is impossible.
+
+CEO: "Okay, what do we get by supporting GDPR?"
+
+Me: "You gain the ability to work with EU users."
+
+CEO: "But functionally - what is it?"
+
+Me: "It gives your users the ability to completely delete their data from your systems; it makes it legally impossible
+for you to sell their data without users agreeing to it; it makes you liable for data breaches under good faith; and it
+makes you hire a DPO to handle compliance monitoring and reporting."
+
+CEO: "... I don't want any of that."
+
+Me: "I get it, but if you want to do business in the EU, this is the law."
+
+CEO: "... We're just a startup; I don't even know if the doors will be open next year... why would I agree to any of
+this?"
+
+Me: "You wouldn't... and California is enacting basically the same thing, soon."
+
+Dumb.
+
+### Users Are Stupid
+
+The reason that GDPR was adopted is because users are stupid. A majority of users opt into systems either not fully
+understanding the ramifications or assuming, incorrectly, that the company had their best interests at heart with regard
+to privacy.
+
+Essentially, if a user created a Facebook account under the impression that their data would remain private, they are
+naive or stupid.
+
+> If you are not paying for it, you are not the customer; you are the product being sold.
+
+In the case of Facebook, users should sign-up with the understanding that anything they contribute to the site will be
+sold and/or public information. This understanding should shape how users use these systems, but it does not for a vast
+number of users.
+
+### A Stupid Solution for Stupidity
+
+In the end, nothing has changed. GDPR puts a financial burden on the service provider and users are no safer than they
+were before - Facebook still sells your data, but now you have a very shiny "delete all data" button.
+
+The EU took the problem of users shooting themselves in the foot and made a law that forced all gun makers to build
+systems into their guns that disabled them from firing straight down... but users are more than happy to pick up their
+foot and fire.

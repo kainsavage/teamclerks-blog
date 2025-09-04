@@ -1,0 +1,40 @@
+---
+title: Rebuilt the Blog Again
+date: '2019-04-19'
+description: Wherein I discuss rebuilding my blog using Gatsby, moving from a custom React setup to a static site generator for simplicity and performance.
+categories:
+  - gatsby
+  - react
+  - static sites
+  - blog rebuild
+  - markdown
+  - web development
+  - framework choice
+  - static generation
+published: true
+---
+
+As the title suggests, and as any observer can tell, I have rebuilt this blog... again.
+
+I tend to do this every year or two just to play with a new technologies. My first rewrite of my blog was in vanilla
+React via `create-react-app`, and I tried to use a few external libraries as possible. I do this mainly to learn the
+inner workings of a framework as well as to learn the various "isms" that come with a given framework choice. To date, I
+have been very happy with React and considere it my framework preference.
+
+However, vanilla React requires one to build a lot of custom components. Components which I do not want to build. I hate
+building styles and templates, and I consider rebuilding, for example, a markdown processor to be a waste of my time. It
+has been done countless times, and I would be adding nothing new to that space.
+
+So, my original React blog was very simple - a back-end which would authenticate me so that I could write and edit blog
+posts, and a front-end React app to consume that data. Very simple, very uncomplicated, and yet still much too
+compicated for a simple blog. I wasn't aiming for Wordpress - I just like to write sometimes.
+
+I came across `Gatsby` by way of Dan Abramov and Ryan Florence on Twitter, so I thought that it would be the next thing
+I tried when rewriting the blog. I have spent a collective of around 8 hours rebuilding the site in Gatsby, and I have
+to confess - it is everything I want.
+
+My blog consists of a React application, which Gatsby 'compiles' into static html/css/js, which can be hosted somewhere
+for static service. I write these posts in Markdown, they are each individual files, I do not have to have a back-end,
+or credentials, or a database. These are just flat files that get transpiled into styled html.
+
+This is the dream.

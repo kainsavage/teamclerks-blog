@@ -1,0 +1,91 @@
+---
+title: Not Much Going on
+date: '2017-06-02'
+description: Wherein I discuss working on a preferences page for my blog and explore React state management patterns for handling multiple form inputs efficiently.
+categories:
+  - react
+  - state management
+  - forms
+  - javascript
+  - web development
+  - preferences
+  - component design
+  - blog development
+published: true
+---
+
+I have not had a lot of time to work on my blog in the last few days, and I have not written much since getting Let's
+Encrypt running (without touching it since initial install, still going strong ^\_^); so, I thought I would post
+something and change that.
+
+Firstly, I am working on getting a `preferences` thing set up so that I can change simple used-everywhere stuff
+(signature and password change for now, but eventually as I add more and more stuff, this page is seems pretty logical).
+In building this out, I noticed that there are a lot of `Reactisms` to which I am becoming more accustomed.
+
+For a little background, React requires each component to keep track of state using a member variable (called `state`...
+shocker), and instead of adding listeners to a form, one is supposed to use `onChange` function pointers on the elements
+themselves. Below is an example of a very simple component:
+
+```jsx
+class _ extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			foo: ''
+		};
+
+		// This is required for binding `this` correctly... a post for another day
+		this.fooChanged = this.fooChanged.bind(this);
+	}
+
+	fooChanged(event) {
+		this.setState({ foo: event.target.value });
+	}
+
+	render() {
+		return <input type="text" value={this.state.foo} onChange={this.fooChanged} />;
+	}
+}
+```
+
+This does not seem so complicated, but one can imagine having several inputs on a `form` (though, we do not actually
+require forms anymore... a post for a different day) causing headaches from all these functions having to be created for
+simply wanting to update state. So, instead we can simplify by creating an intuitive mapping:
+
+```jsx
+class _ extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			foo: '',
+			bar: ''
+		};
+
+		this.inputChanged = this.inputChanged.bind(this);
+	}
+
+	inputChanged(event) {
+		let newState = {};
+		newState[event.target.name] = event.target.value;
+		// This will still evaluate to `{foo: event.target.value}`
+		this.setState(newState);
+	}
+
+	render() {
+		return (
+			<>
+				<input type="text" name="foo" value={this.state.foo} onChange={this.inputChanged} />
+				<input type="text" name="bar" value={this.state.bar} onChange={this.inputChanged} />
+			</>
+		);
+	}
+}
+```
+
+There, now we have an `onChange` function that works for all the inputs we have, provided we ensure that each has a
+`name` attribute that corresponds to the same name of the state holding the value for that input.
+
+I have not played with this enough, but I suspect that I can abstract out the `inputChanged` function into an abstract
+class (well... it is JavaScript, so it will just be a class that one should treat as abstract).
