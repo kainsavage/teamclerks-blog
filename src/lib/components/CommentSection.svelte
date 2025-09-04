@@ -96,7 +96,7 @@
 			</button>
 		</div>
 
-		<div class="space-y-8 pb-8">
+		<div class="space-y-8">
 			{#if !comments.replies || comments.replies.length === 0}
 				<p class="text-center">
 					Be the first to comment
@@ -111,11 +111,9 @@
 					</a>
 				</p>
 			{:else}
-				{#each comments.replies as reply, index (reply)}
+				{#each comments.replies as reply}
 					{#if AppBskyFeedDefs.isThreadViewPost(reply)}
-						<div class={index === comments.replies.length - 1 ? 'pb-4' : ''}>
-							<Comment comment={reply} />
-						</div>
+						<Comment comment={reply} />
 					{/if}
 				{/each}
 			{/if}

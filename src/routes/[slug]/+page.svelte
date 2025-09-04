@@ -68,7 +68,7 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<div class="max-w-full flex-grow flex-col overflow-hidden">
+<div class="max-w-full flex-grow flex-col overflow-hidden pb-4">
 	<!-- Hero Image -->
 	{#if data.meta.hero_url}
 		<HeroImage
@@ -118,10 +118,12 @@
 		<data.content />
 	</article>
 
-	<!-- Comments Section -->
-	<div class="mt-4 border-t border-[var(--color-tan-300)]">
-		<CommentSection postId={data.meta.bluesky_post_id} />
-	</div>
+	{#if data.meta.bluesky_post_id}
+		<!-- Comments Section -->
+		<div class="mt-4 border-t border-[var(--color-tan-300)]">
+			<CommentSection postId={data.meta.bluesky_post_id} />
+		</div>
+	{/if}
 </div>
 
 <style>
