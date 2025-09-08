@@ -71,7 +71,6 @@ The site is configured for static deployment. The build process creates optimize
 
 ## Notes for AI Assistant
 - Always check the `Categories` type when suggesting new categories
-- Remember to update the `entries()` function when adding new posts
 - Image processing is automatic during build but can be run manually
 - The site uses SvelteKit's static adapter for full static generation
 - All posts are processed through mdsvex for markdown support
