@@ -2,7 +2,7 @@
 	// Logo component with Svelte scoped styles
 </script>
 
-<a href="/" class="logo flex flex-row no-underline">
+<a href="/" class="logo flex flex-row no-underline print:!hidden">
 	<p class="team border-2 border-r-0 border-l-0 px-1 font-thin">TEAM</p>
 	<p class="clerks border-2 border-r-0 border-l-0 border-transparent px-1 font-medium">CLERKS</p>
 </a>
