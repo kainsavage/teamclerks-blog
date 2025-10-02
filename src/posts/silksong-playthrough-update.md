@@ -3,7 +3,7 @@ title: 'Silksong Play-Through Update'
 description: 'Wherein I update you on my spoiler-free journey through Hollow Knight: Silksong, from anticipation to first ending and beyond.'
 date: '2025-10-02'
 hero: silksong-hero.jpg
-bluesky_post_id: ''
+bluesky_post_id: '3m2aix7mmz22u'
 categories:
   - gaming
   - metroidvania
