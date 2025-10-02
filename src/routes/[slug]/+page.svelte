@@ -68,7 +68,7 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<div class="max-w-full flex-grow flex-col overflow-hidden pb-4">
+<div class="mx-auto max-w-[630px] flex-grow flex-col overflow-hidden pt-10 pb-4">
 	<!-- Hero Image -->
 	{#if data.meta.hero_url}
 		<HeroImage
@@ -79,12 +79,11 @@
 	{/if}
 
 	<!-- Title -->
-	<div class="mb-4 flex max-w-full flex-row items-start justify-between">
-		<button
-			onclick={copyUrl}
-			class="max-w-full cursor-pointer text-left transition-opacity hover:opacity-80"
-		>
-			<h1 class="text-[1.5rem] font-extrabold break-words md:text-[2rem]">{data.meta.title}</h1>
+	<div class="mb-4 flex flex-row items-start justify-between">
+		<button onclick={copyUrl} class="cursor-pointer text-left transition-opacity hover:opacity-80">
+			<h1 class="text-[1.5rem] font-extrabold break-words md:text-[3rem]">
+				{data.meta.title}
+			</h1>
 		</button>
 	</div>
 
@@ -102,7 +101,7 @@
 
 	<!-- Categories -->
 	{#if data.meta.categories && data.meta.categories.length > 0}
-		<div class="mb-6 flex max-w-full flex-wrap gap-2 overflow-hidden">
+		<div class="mb-6 flex flex-wrap gap-2">
 			{#each data.meta.categories as category (category)}
 				<span
 					class="category-pill rounded-full border-1 border-[var(--color-primary)] bg-transparent px-3 py-1 text-sm whitespace-nowrap text-[var(--color-primary)]"
@@ -114,7 +113,7 @@
 	{/if}
 
 	<!-- Content -->
-	<article class="max-w-full overflow-hidden">
+	<article class="overflow-hidden">
 		<data.content />
 	</article>
 
@@ -128,8 +127,8 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
+		font-size: 1.125rem; /* Larger base text size */
+		line-height: 1.7; /* Better line height for readability */
 	}
 
 	/* Post body styles converted from CSS module - using nested :global for dynamic content */
@@ -142,6 +141,8 @@
 		h6 {
 			font-weight: 700;
 			padding: 1rem 0.5rem 1rem 0;
+			line-height: 1.3; /* Better line height for headings */
+			margin-bottom: 0.5rem; /* Consistent spacing after headings */
 		}
 
 		h1 {
@@ -208,7 +209,9 @@
 		}
 
 		p {
-			margin: 0 0 0.5rem 0;
+			margin: 0 0 1.5rem 0; /* Increased paragraph spacing */
+			font-size: 1.125rem; /* Larger paragraph text */
+			line-height: 1.7; /* Better line height for paragraphs */
 		}
 
 		blockquote {
@@ -236,11 +239,19 @@
 		ol {
 			list-style: decimal inside;
 			padding-bottom: 1rem;
+			margin: 0 0 1.5rem 0; /* Better spacing for lists */
+			line-height: 1.7; /* Better line height for list items */
 		}
 
 		ul {
 			list-style: disc inside;
 			padding-bottom: 1rem;
+			margin: 0 0 1.5rem 0; /* Better spacing for lists */
+			line-height: 1.7; /* Better line height for list items */
+		}
+
+		li {
+			margin-bottom: 0.5rem; /* Space between list items */
 		}
 
 		hr {
@@ -316,11 +327,22 @@
 			box-sizing: border-box;
 		}
 
-		/* Mobile responsive categories */
+		/* Mobile responsive categories and text */
 		@media (max-width: 768px) {
 			.category-pill {
 				font-size: 0.75rem;
 				padding: 0.25rem 0.5rem;
+			}
+
+			/* Slightly smaller text on mobile for better fit */
+			p {
+				font-size: 1rem;
+				line-height: 1.6;
+			}
+
+			/* Adjust article width for mobile */
+			article {
+				font-size: 1rem;
 			}
 		}
 	}
