@@ -1,133 +1,166 @@
 <script lang="ts">
 	let { data } = $props();
-	let articleElement: HTMLElement;
 </script>
 
 <svelte:head>
 	<title>{data.meta.title} | TeamClerks</title>
+	<meta name="description" content={data.meta.description} />
 </svelte:head>
 
-<div class="flex-grow flex-col">
-	<!-- Title -->
-	<div class="mb-4 flex flex-row items-start justify-between">
-		<h1 class="text-[2rem] font-extrabold">{data.meta.title}</h1>
+<section class="space-y-10 pb-16">
+	<div
+		class="flex flex-col gap-4 border-b border-outline-variant/40 pb-6 md:flex-row md:items-end md:justify-between"
+	>
+		<div>
+			<h1 class="font-headline text-4xl text-secondary italic">{data.meta.title}</h1>
+			<p class="font-label text-sm tracking-tighter text-on-surface-variant uppercase opacity-60">
+				{data.meta.description}
+			</p>
+		</div>
+		<a
+			href="/"
+			class="flex items-center gap-2 font-label text-sm text-tertiary no-underline hover:underline"
+		>
+			← Home
+		</a>
 	</div>
 
-	<!-- Content -->
-	<article bind:this={articleElement}>
+	<article class="about-body mx-auto w-full max-w-[630px]">
 		<data.content />
 	</article>
-</div>
+</section>
 
 <style>
-	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
+	.about-body {
+		font-family: var(--font-body);
+		font-size: 1.125rem;
+		line-height: 1.75;
+		color: var(--color-on-surface);
 	}
 
-	/* Post body styles converted from CSS module - using nested :global for dynamic content */
-	article :global {
+	.about-body :global {
 		h1,
 		h2,
 		h3,
 		h4,
 		h5,
 		h6 {
-			font-weight: 700;
-			padding: 1rem 0.5rem 1rem 0;
-		}
-
-		h1 {
-			font-size: 2.5rem;
-			line-height: 2.5rem;
+			font-family: var(--font-headline);
+			font-weight: 600;
+			color: var(--color-on-surface);
+			line-height: 1.25;
+			margin: 1.5rem 0 0.75rem;
+			padding: 0;
 		}
 
 		h2 {
-			font-size: 2.25rem;
-			line-height: 2.25rem;
+			font-size: 1.875rem;
+			font-style: italic;
+			color: var(--color-secondary);
 		}
 
 		h3 {
-			font-size: 2rem;
-			line-height: 2rem;
+			font-size: 1.5rem;
 		}
 
 		h4 {
-			font-size: 1.75rem;
-			line-height: 1.75rem;
-		}
-
-		h5 {
-			font-size: 1.5rem;
-			line-height: 1.5rem;
-		}
-
-		h6 {
 			font-size: 1.25rem;
-			line-height: 1.25rem;
+		}
+
+		h5,
+		h6 {
+			font-size: 1.125rem;
 		}
 
 		p {
-			margin: 0 0 0.5rem 0;
+			margin: 0 0 1.25rem;
+			color: var(--color-on-surface-variant);
+		}
+
+		a {
+			color: var(--color-tertiary);
+			text-decoration: underline;
+			text-decoration-color: color-mix(in srgb, var(--color-tertiary) 45%, transparent);
+			text-underline-offset: 3px;
+			transition:
+				color 0.2s ease,
+				text-decoration-color 0.2s ease;
+		}
+
+		a:hover {
+			color: var(--color-primary);
+			text-decoration-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 		}
 
 		blockquote {
 			max-width: 100%;
-			background: #2d2d2d;
-			border-left: 10px solid var(--color-text);
-			margin: 1rem 1.25rem;
-			padding: 0.5em 10px;
+			margin: 1.25rem 0;
+			padding: 1rem 1rem 1rem 1.25rem;
+			background: var(--color-surface-container);
+			border-left: 3px solid color-mix(in srgb, var(--color-tertiary) 65%, transparent);
 			quotes: '\201C' '\201D' '\2018' '\2019';
 		}
 
-		blockquote:before {
-			color: var(--color-text);
-			content: open-quote;
-			font-size: 4em;
-			line-height: 0.1em;
-			margin-right: 0.25em;
-			vertical-align: -0.4em;
+		blockquote::before {
+			display: none;
 		}
 
 		blockquote p {
-			display: inline;
+			display: block;
+			margin: 0;
 		}
 
 		ol {
-			list-style: decimal inside;
-			padding-bottom: 1rem;
+			list-style: decimal;
+			padding-left: 1.25rem;
+			margin: 0 0 1.25rem;
+			color: var(--color-on-surface-variant);
 		}
 
 		ul {
-			list-style: disc inside;
-			padding-bottom: 1rem;
+			list-style: disc;
+			padding-left: 1.25rem;
+			margin: 0 0 1.25rem;
+			color: var(--color-on-surface-variant);
+		}
+
+		li {
+			margin-bottom: 0.5rem;
+		}
+
+		li::marker {
+			color: var(--color-outline);
 		}
 
 		hr {
 			border: 0;
 			height: 1px;
-			background: var(--color-text);
-			margin: 1rem 0;
+			margin: 2rem 0;
+			background: color-mix(in srgb, var(--color-outline-variant) 50%, transparent);
 		}
 
 		pre {
-			max-width: calc(100vw - 1rem);
+			max-width: 100%;
+			overflow-x: auto;
+			margin: 1rem 0;
+			padding: 1rem;
+			background: var(--color-surface-container-highest);
+			border: 1px solid color-mix(in srgb, var(--color-outline-variant) 42%, transparent);
+			box-shadow: 0 6px 28px rgb(0 0 0 / 0.38);
 		}
 
-		code {
+		:not(pre) > code {
 			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-			font-size: 1em;
-			text-align: left;
-			white-space: pre;
-			word-spacing: normal;
-			word-break: normal;
-			word-wrap: normal;
-			line-height: 1.5;
-			tab-size: 2;
-			hyphens: none;
-			background: #2d2d2d;
-			color: #ccc;
-			padding: 0.15rem 0.25rem;
+			font-size: 0.925em;
+			background: var(--color-surface-container-highest);
+			color: var(--color-on-surface-variant);
+			padding: 0.15rem 0.35rem;
+		}
+
+		pre code {
+			background: transparent;
+			padding: 0;
+			color: inherit;
 		}
 
 		p img {
@@ -138,6 +171,27 @@
 		p img[src$='#right'] {
 			float: right;
 			padding-left: 0.5rem;
+		}
+
+		strong {
+			color: var(--color-on-surface);
+			font-weight: 600;
+		}
+
+		@media (max-width: 768px) {
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			h3 {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.about-body {
+			font-size: 1rem;
 		}
 	}
 </style>

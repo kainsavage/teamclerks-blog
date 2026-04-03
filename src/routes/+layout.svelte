@@ -9,6 +9,12 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+		rel="stylesheet"
+	/>
 	<title>TeamClerks</title>
 </svelte:head>
 
@@ -23,9 +29,20 @@
 		<nav class="flex items-center">
 			<div class="flex w-full justify-between gap-4 md:w-fit print:!hidden">
 				<!-- New Post link would go here when authenticated -->
-				<a href="/about/" class="text-inherit no-underline hover:no-underline">About</a>
-				<a href="/archive/" class="text-inherit no-underline hover:no-underline">Archive</a>
-				<a href="mailto:kain@teamclerks.net" class="text-inherit no-underline hover:no-underline">
+				<a
+					href="/about/"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+					>About</a
+				>
+				<a
+					href="/archive/"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+					>Archive</a
+				>
+				<a
+					href="mailto:kain@teamclerks.net"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+				>
 					Contact
 				</a>
 			</div>
@@ -42,9 +59,20 @@
 
 			<!-- Mobile Navigation -->
 			<nav class="flex w-full justify-between gap-4 pb-2 md:hidden print:!hidden">
-				<a href="/about/" class="text-inherit no-underline hover:no-underline">About</a>
-				<a href="/archive/" class="text-inherit no-underline hover:no-underline">Archive</a>
-				<a href="mailto:kain@teamclerks.net" class="text-inherit no-underline hover:no-underline">
+				<a
+					href="/about/"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+					>About</a
+				>
+				<a
+					href="/archive/"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+					>Archive</a
+				>
+				<a
+					href="mailto:kain@teamclerks.net"
+					class="text-on-surface-variant no-underline transition-colors hover:text-tertiary hover:no-underline"
+				>
 					Contact
 				</a>
 			</nav>

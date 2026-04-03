@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	import { page } from '$app/state';
-	import { dev } from '$app/environment';
+	import GrindPostCard from '$lib/components/GrindPostCard.svelte';
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import CommentSection from '$lib/components/CommentSection.svelte';
+	import { page } from '$app/state';
+	import { dev } from '$app/environment';
 
 	let { data } = $props();
 	let showCopyMessage = $state(false);
 
-	// Copy URL functionality
 	function copyUrl() {
 		const url = page.url.href;
 		navigator.clipboard.writeText(url).then(() => {
@@ -18,6 +18,18 @@
 			}, 2000);
 		});
 	}
+
+	let subtitle = $derived(data.meta.synopsis || data.meta.excerpt || data.meta.description || '');
+
+	let titleParts = $derived.by(() => {
+		const t = data.meta.title.trim();
+		const words = t.split(/\s+/).filter(Boolean);
+		if (words.length <= 1) return { lead: t, last: '' };
+		return {
+			lead: words.slice(0, -1).join(' '),
+			last: words[words.length - 1] ?? ''
+		};
+	});
 </script>
 
 <svelte:head>
@@ -48,7 +60,6 @@
 		<meta property="article:published_time" content={new Date(data.meta.date).toISOString()} />
 	{/if}
 
-	<!-- Twitter Card metadata -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta
@@ -63,209 +74,317 @@
 		/>
 	{/if}
 
-	<!-- Additional metadata -->
 	<meta name="author" content="TeamClerks" />
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<div class="mx-auto max-w-[630px] flex-grow flex-col overflow-hidden pt-10 pb-4">
-	<!-- Hero Image -->
+<section class="post-article-root">
+	<!-- Cinematic hero (Echoes of Alexandria / full-bleed) -->
 	{#if data.meta.hero_url}
-		<HeroImage
-			src={data.meta.hero_url}
-			alt={data.meta.synopsis || data.meta.excerpt || data.meta.title}
-			blurDataUrl={data.meta.blurred_hero_data_url}
-		/>
+		<header
+			class="relative left-1/2 mb-0 flex min-h-[min(100dvh,870px)] w-screen max-w-[100vw] -translate-x-1/2 items-end overflow-hidden pt-8 md:min-h-[min(85vh,870px)]"
+		>
+			<div class="post-hero-overlay" aria-hidden="true"></div>
+			<HeroImage
+				cinematic
+				src={data.meta.hero_url}
+				alt={data.meta.synopsis || data.meta.excerpt || data.meta.title}
+				blurDataUrl={data.meta.blurred_hero_data_url}
+			/>
+			<div class="relative z-20 mx-auto w-full max-w-5xl px-6 pb-12 md:px-8 md:pb-20">
+				{#if data.meta.categories && data.meta.categories.length > 0}
+					<div
+						class="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-label text-xs tracking-widest text-secondary uppercase"
+					>
+						{#each data.meta.categories as cat, i (`${cat}-${i}`)}
+							{#if i > 0}
+								<span class="h-1 w-1 shrink-0 bg-outline-variant" aria-hidden="true"></span>
+							{/if}
+							<span>{cat}</span>
+						{/each}
+					</div>
+				{/if}
+
+				<button
+					type="button"
+					onclick={copyUrl}
+					class="text-left transition-opacity hover:opacity-85"
+				>
+					<h1
+						class="max-w-4xl font-headline text-5xl leading-tight font-bold tracking-tight text-on-surface italic md:text-7xl md:leading-[1.05]"
+					>
+						{#if titleParts.last}
+							{titleParts.lead}
+							<span class="text-tertiary"> {titleParts.last}</span>
+						{:else}
+							{titleParts.lead}
+						{/if}
+					</h1>
+				</button>
+
+				{#if subtitle}
+					<p
+						class="mt-6 max-w-2xl font-headline text-xl text-on-surface-variant italic opacity-90 md:text-2xl"
+					>
+						{subtitle}
+					</p>
+				{/if}
+
+				<time
+					datetime={data.meta.date}
+					class="mt-8 block font-headline text-xl font-semibold text-tertiary italic md:mt-10 md:text-2xl"
+				>
+					{formatDate(data.meta.date)}
+				</time>
+			</div>
+		</header>
+	{:else}
+		<header class="mx-auto w-full max-w-5xl px-6 pt-6 pb-10 md:px-8 md:pb-20">
+			{#if data.meta.categories && data.meta.categories.length > 0}
+				<div
+					class="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-label text-xs tracking-widest text-secondary uppercase"
+				>
+					{#each data.meta.categories as cat, i (`${cat}-${i}`)}
+						{#if i > 0}
+							<span class="h-1 w-1 shrink-0 bg-outline-variant" aria-hidden="true"></span>
+						{/if}
+						<span>{cat}</span>
+					{/each}
+				</div>
+			{/if}
+			<button type="button" onclick={copyUrl} class="text-left transition-opacity hover:opacity-85">
+				<h1
+					class="max-w-4xl font-headline text-5xl leading-tight font-bold tracking-tight text-on-surface italic md:text-7xl md:leading-[1.05]"
+				>
+					{#if titleParts.last}
+						{titleParts.lead}
+						<span class="text-tertiary"> {titleParts.last}</span>
+					{:else}
+						{titleParts.lead}
+					{/if}
+				</h1>
+			</button>
+			{#if subtitle}
+				<p
+					class="mt-6 max-w-2xl font-headline text-xl text-on-surface-variant italic opacity-90 md:text-2xl"
+				>
+					{subtitle}
+				</p>
+			{/if}
+			<time
+				datetime={data.meta.date}
+				class="mt-8 block font-headline text-xl font-semibold text-tertiary italic md:mt-10 md:text-2xl"
+			>
+				{formatDate(data.meta.date)}
+			</time>
+		</header>
 	{/if}
 
-	<!-- Title -->
-	<div class="mb-4 flex flex-row items-start justify-between">
-		<button onclick={copyUrl} class="cursor-pointer text-left transition-opacity hover:opacity-80">
-			<h1 class="text-[1.5rem] font-extrabold break-words md:text-[3rem]">
-				{data.meta.title}
-			</h1>
-		</button>
-	</div>
-
-	<!-- Copy Message -->
 	{#if showCopyMessage}
-		<div class="fixed top-4 right-4 z-50 rounded bg-green-500 px-4 py-2 text-white shadow-lg">
+		<div
+			class="fixed top-4 right-4 z-50 border border-primary/30 bg-surface-container px-4 py-2 font-label text-sm text-on-surface shadow-lg"
+		>
 			URL copied to clipboard!
 		</div>
 	{/if}
 
-	<!-- Date -->
-	<div class="mb-4 text-sm italic">
-		Published {formatDate(data.meta.date)}
-	</div>
+	<main class="relative z-30 bg-background px-6 py-12 md:py-20">
+		<article class="post-article-content mx-auto max-w-[700px] overflow-hidden">
+			<data.content />
+		</article>
 
-	<!-- Categories -->
-	{#if data.meta.categories && data.meta.categories.length > 0}
-		<div class="mb-6 flex flex-wrap gap-2">
-			{#each data.meta.categories as category (category)}
-				<span
-					class="category-pill rounded-full border-1 border-[var(--color-primary)] bg-transparent px-3 py-1 text-sm whitespace-nowrap text-[var(--color-primary)]"
-				>
-					#{category}
-				</span>
-			{/each}
-		</div>
-	{/if}
+		{#if data.meta.bluesky_post_id}
+			<div
+				class="mx-auto mt-16 max-w-[700px] border-t-2 border-primary/20 bg-surface-container p-6 md:p-8"
+			>
+				<CommentSection postId={data.meta.bluesky_post_id} />
+			</div>
+		{/if}
 
-	<!-- Content -->
-	<article class="overflow-hidden">
-		<data.content />
-	</article>
-
-	{#if data.meta.bluesky_post_id}
-		<!-- Comments Section -->
-		<div class="mt-4 border-t border-[var(--color-tan-300)]">
-			<CommentSection postId={data.meta.bluesky_post_id} />
-		</div>
-	{/if}
-</div>
+		{#if data.relatedPosts && data.relatedPosts.length > 0}
+			<section
+				class="relative left-1/2 mt-20 w-screen max-w-[100vw] -translate-x-1/2 bg-surface-container-low px-6 py-16 md:py-20"
+			>
+				<div class="mx-auto max-w-5xl">
+					<h5
+						class="mb-12 text-center font-label text-xs tracking-[0.3em] text-secondary uppercase"
+					>
+						Continue the journey
+					</h5>
+					<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+						{#each data.relatedPosts as post (post.slug)}
+							<GrindPostCard {post} />
+						{/each}
+					</div>
+				</div>
+			</section>
+		{/if}
+	</main>
+</section>
 
 <style>
-	article {
-		font-size: 1.125rem; /* Larger base text size */
-		line-height: 1.7; /* Better line height for readability */
+	.post-article-content {
+		font-family: var(--font-body);
+		font-size: 1.125rem;
+		line-height: 1.75;
 	}
 
-	/* Post body styles converted from CSS module - using nested :global for dynamic content */
-	article :global {
+	.post-article-content :global {
 		h1,
 		h2,
 		h3,
 		h4,
 		h5,
 		h6 {
-			font-weight: 700;
-			padding: 1rem 0.5rem 1rem 0;
-			line-height: 1.3; /* Better line height for headings */
-			margin-bottom: 0.5rem; /* Consistent spacing after headings */
-		}
-
-		h1 {
-			font-size: 2.5rem;
-			line-height: 2.5rem;
+			font-family: var(--font-headline);
+			font-weight: 600;
+			line-height: 1.25;
+			padding: 0;
 		}
 
 		h2 {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin: 4rem 0 2rem;
 			font-size: 2.25rem;
-			line-height: 2.25rem;
+			font-style: italic;
+			font-weight: 700;
+			color: var(--color-tertiary);
+		}
+
+		h2::before {
+			content: '';
+			width: 2rem;
+			height: 2px;
+			flex-shrink: 0;
+			background: color-mix(in srgb, var(--color-tertiary) 30%, transparent);
 		}
 
 		h3 {
-			font-size: 2rem;
-			line-height: 2rem;
+			margin: 3rem 0 1.5rem;
+			font-size: 1.875rem;
+			font-style: italic;
+			font-weight: 700;
+			color: var(--color-primary);
 		}
 
 		h4 {
-			font-size: 1.75rem;
-			line-height: 1.75rem;
-		}
-
-		h5 {
+			margin: 2rem 0 1rem;
 			font-size: 1.5rem;
-			line-height: 1.5rem;
+			font-style: italic;
+			color: var(--color-on-surface);
 		}
 
+		h5,
 		h6 {
+			margin: 1.5rem 0 0.75rem;
 			font-size: 1.25rem;
-			line-height: 1.25rem;
+			color: var(--color-on-surface);
 		}
 
-		/* Mobile responsive text sizing */
-		@media (max-width: 768px) {
-			h1 {
-				font-size: 1.75rem;
-				line-height: 1.75rem;
-			}
+		> p:first-child {
+			font-size: 1.25rem;
+			line-height: 1.75;
+			color: var(--color-on-surface);
+		}
 
-			h2 {
-				font-size: 1.5rem;
-				line-height: 1.5rem;
-			}
-
-			h3 {
-				font-size: 1.25rem;
-				line-height: 1.25rem;
-			}
-
-			h4 {
-				font-size: 1.125rem;
-				line-height: 1.125rem;
-			}
-
-			h5 {
-				font-size: 1rem;
-				line-height: 1rem;
-			}
-
-			h6 {
-				font-size: 0.875rem;
-				line-height: 0.875rem;
-			}
+		> p:first-child::first-letter {
+			float: left;
+			margin-right: 0.75rem;
+			font-family: var(--font-headline);
+			font-size: 4.5rem;
+			line-height: 0.85;
+			font-style: italic;
+			color: var(--color-primary);
 		}
 
 		p {
-			margin: 0 0 1.5rem 0; /* Increased paragraph spacing */
-			font-size: 1.125rem; /* Larger paragraph text */
-			line-height: 1.7; /* Better line height for paragraphs */
+			margin: 0 0 2rem;
+			font-size: 1.25rem;
+			line-height: 1.75;
+			color: var(--color-on-surface-variant);
+		}
+
+		a {
+			color: var(--color-tertiary);
+			text-decoration: underline;
+			text-decoration-color: color-mix(in srgb, var(--color-tertiary) 45%, transparent);
+			text-underline-offset: 3px;
+		}
+
+		a:hover {
+			color: var(--color-primary);
+			text-decoration-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 		}
 
 		blockquote {
-			max-width: 100%;
-			background: #2d2d2d;
-			border-left: 10px solid var(--color-text);
-			margin: 1rem 1.25rem;
-			padding: 0.5em 10px;
-			quotes: '\201C' '\201D' '\2018' '\2019';
+			position: relative;
+			margin: 3rem 0;
+			padding: 2.5rem;
+			background: var(--color-surface-container-low);
+			border-left: 4px solid var(--color-tertiary);
+			quotes: none;
 		}
 
-		blockquote:before {
-			color: var(--color-text);
-			content: open-quote;
-			font-size: 4em;
-			line-height: 0.1em;
-			margin-right: 0.25em;
-			vertical-align: -0.4em;
+		blockquote::before,
+		blockquote::after {
+			display: none;
 		}
 
 		blockquote p {
-			display: inline;
+			margin: 0;
+			font-family: var(--font-headline);
+			font-size: 1.75rem;
+			font-style: italic;
+			line-height: 1.35;
+			color: var(--color-on-surface);
 		}
 
 		ol {
-			list-style: decimal inside;
-			padding-bottom: 1rem;
-			margin: 0 0 1.5rem 0; /* Better spacing for lists */
-			line-height: 1.7; /* Better line height for list items */
+			margin: 0 0 2rem;
+			padding-left: 1.25rem;
+			list-style: decimal;
+			color: var(--color-on-surface-variant);
 		}
 
 		ul {
-			list-style: disc inside;
-			padding-bottom: 1rem;
-			margin: 0 0 1.5rem 0; /* Better spacing for lists */
-			line-height: 1.7; /* Better line height for list items */
+			margin: 0 0 2rem;
+			padding-left: 1.25rem;
+			list-style: disc;
+			color: var(--color-on-surface-variant);
 		}
 
 		li {
-			margin-bottom: 0.5rem; /* Space between list items */
+			margin-bottom: 0.5rem;
+			font-size: 1.25rem;
+			line-height: 1.75;
+		}
+
+		li::marker {
+			color: var(--color-outline);
 		}
 
 		hr {
+			margin: 2.5rem 0;
 			border: 0;
 			height: 1px;
-			background: var(--color-text);
-			margin: 1rem 0;
+			background: color-mix(in srgb, var(--color-outline-variant) 50%, transparent);
 		}
 
 		pre {
-			max-width: calc(100vw - 1rem);
+			max-width: 100%;
 		}
 
-		code {
+		:not(pre) > code {
+			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+			font-size: 0.925em;
+			background: var(--color-surface-container-highest);
+			color: var(--color-on-surface-variant);
+			padding: 0.15rem 0.35rem;
+		}
+
+		pre code {
 			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 			font-size: 1em;
 			text-align: left;
@@ -276,29 +395,71 @@
 			line-height: 1.5;
 			tab-size: 2;
 			hyphens: none;
-			background: #2d2d2d;
-			color: #ccc;
-			padding: 0.15rem 0.25rem;
+			background: transparent;
+			color: inherit;
+			padding: 0;
+		}
+
+		figure {
+			margin: 3rem 0;
+		}
+
+		p:has(> img:only-child) {
+			position: relative;
+			margin: 3rem 0;
+			padding: 2px;
+			background: color-mix(in srgb, var(--color-outline-variant) 20%, transparent);
+			clip-path: polygon(
+				0 4px,
+				4px 4px,
+				4px 0,
+				calc(100% - 4px) 0,
+				calc(100% - 4px) 4px,
+				100% 4px,
+				100% calc(100% - 4px),
+				calc(100% - 4px) calc(100% - 4px),
+				calc(100% - 4px) 100%,
+				4px 100%,
+				4px calc(100% - 4px),
+				0 calc(100% - 4px)
+			);
+		}
+
+		p:has(> img:only-child) img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-width: 100%;
+			filter: grayscale(1) contrast(1.15);
+		}
+
+		figcaption {
+			margin-top: 1rem;
+			font-family: var(--font-label);
+			font-size: 0.75rem;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: var(--color-on-surface-variant);
+			opacity: 0.6;
 		}
 
 		p img {
-			float: left;
-			padding-right: 0.5rem;
+			float: none;
+			padding: 0;
 		}
 
 		p img[src$='#right'] {
-			float: right;
-			padding-left: 0.5rem;
+			float: none;
+			padding: 0;
 		}
 
-		/* Responsive iframe and embedded content */
 		iframe {
 			max-width: 100%;
 			height: auto;
 			width: 100%;
 		}
 
-		/* YouTube embed specific styling */
 		iframe[src*='youtube.com'],
 		iframe[src*='youtu.be'] {
 			aspect-ratio: 16 / 9;
@@ -307,42 +468,48 @@
 			max-width: 100%;
 		}
 
-		/* Responsive video and audio elements */
 		video,
 		audio {
 			max-width: 100%;
 			height: auto;
 		}
 
-		/* Responsive tables */
 		table {
+			display: block;
 			max-width: 100%;
 			overflow-x: auto;
-			display: block;
 		}
 
-		/* Ensure all content respects container width */
-		* {
-			max-width: 100%;
-			box-sizing: border-box;
+		strong {
+			color: var(--color-on-surface);
+			font-weight: 600;
 		}
 
-		/* Mobile responsive categories and text */
 		@media (max-width: 768px) {
-			.category-pill {
-				font-size: 0.75rem;
-				padding: 0.25rem 0.5rem;
+			h2 {
+				font-size: 1.75rem;
+				flex-wrap: wrap;
 			}
 
-			/* Slightly smaller text on mobile for better fit */
-			p {
-				font-size: 1rem;
-				line-height: 1.6;
+			h3 {
+				font-size: 1.25rem;
 			}
 
-			/* Adjust article width for mobile */
-			article {
-				font-size: 1rem;
+			> p:first-child {
+				font-size: 1.125rem;
+			}
+
+			> p:first-child::first-letter {
+				font-size: 3.25rem;
+			}
+
+			p,
+			li {
+				font-size: 1.125rem;
+			}
+
+			blockquote p {
+				font-size: 1.35rem;
 			}
 		}
 	}

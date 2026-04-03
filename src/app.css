@@ -14,32 +14,132 @@
 	--color-tan-800: #706757;
 	--color-tan-900: #625947;
 
-	--color-body: oklch(25.81% 0 80.69);
-	--color-text: oklch(74.01% 0.016 80.69);
+	/* Archivist design system (surfaces & type) */
+	--color-body: #13131b;
+	--color-text: #e4e1ed;
+	--color-on-surface: #e4e1ed;
+	--color-on-surface-variant: #d9c1bf;
+	--color-surface-container-low: #1b1b23;
+	--color-surface-container: #1f1f27;
+	--color-surface-container-highest: #34343d;
+	--color-primary: #ffb4a8;
+	--color-on-primary: #690000;
+	--color-primary-container: #530000;
+	/* Darker than `primary` for CTA gradient start — better contrast with white text */
+	--color-primary-cta-start: color-mix(
+		in srgb,
+		var(--color-primary) 62%,
+		var(--color-primary-container) 38%
+	);
+	--color-secondary: #b4cdb8;
+	--color-tertiary: #e9c176;
+	--color-outline: #a18c8a;
+	--color-outline-variant: #544341;
 
-	--color-primary: var(--color-tan-600);
 	--color-primary-light: var(--color-tan-400);
 	--color-primary-dark: var(--color-tan-800);
-	--color-text-light: var(--color-tan-700);
+	--color-text-light: var(--color-on-surface-variant);
 	--color-background: var(--color-body);
 	--color-background-dark: var(--color-tan-100);
+
+	--font-headline: 'Newsreader', ui-serif, Georgia, serif;
+	--font-body: 'Noto Serif', ui-serif, Georgia, serif;
+	--font-label: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
 	color-scheme: dark;
 }
 
+/* 100vw (e.g. Tailwind w-screen) includes scrollbar width and can cause horizontal scroll */
+html {
+	overflow-x: hidden;
+}
+
 body {
 	background-color: var(--color-body);
 	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+/* Inline / fenced code without Prism classes — same elevated surface as prism.css */
+:not(pre) > code:not([class*='language-']) {
+	background: var(--color-surface-container-highest);
+	color: var(--color-on-surface-variant);
+	padding: 0.15em 0.4em;
+	font-size: 0.925em;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 a {
-	color: oklch(74.01% 0.1525 80.69);
+	color: var(--color-tertiary);
 	transition-timing-function: cubic-bezier(0.4, 0.2, 0.2, 1);
 	transition-duration: 300ms;
 
 	&:hover {
-		color: oklch(81.6% 0.1525 80.69);
+		color: var(--color-primary);
 	}
+}
+
+/* JRPG-style frame: tonal edge + soft depth (no harsh 1px dividers) */
+.pixel-frame {
+	border: 2px solid color-mix(in srgb, var(--color-outline-variant) 85%, transparent);
+	box-shadow: 4px 4px 0 0 rgb(0 0 0 / 0.35);
+	position: relative;
+}
+
+.pixel-frame::before {
+	content: '';
+	position: absolute;
+	inset: -4px;
+	border: 1px solid color-mix(in srgb, var(--color-outline) 20%, transparent);
+	pointer-events: none;
+}
+
+.ambient-float {
+	box-shadow: 0 20px 40px rgb(0 0 0 / 0.4);
+}
+
+/* JRPG notched corners for inline figures (Alexandria article layout) */
+.pixel-corners {
+	clip-path: polygon(
+		0 4px,
+		4px 4px,
+		4px 0,
+		calc(100% - 4px) 0,
+		calc(100% - 4px) 4px,
+		100% 4px,
+		100% calc(100% - 4px),
+		calc(100% - 4px) calc(100% - 4px),
+		calc(100% - 4px) 100%,
+		4px 100%,
+		4px calc(100% - 4px),
+		0 calc(100% - 4px)
+	);
+}
+
+/* Article hero: radial scrim (opaque center → clear edges) + bottom fade for title */
+.post-hero-overlay {
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+	background-image:
+		linear-gradient(
+			to top,
+			color-mix(in srgb, var(--color-body) 100%, transparent) 0%,
+			color-mix(in srgb, var(--color-body) 35%, transparent) 38%,
+			transparent 62%
+		),
+		radial-gradient(
+			ellipse 95% 88% at 50% 45%,
+			color-mix(in srgb, var(--color-body) 88%, transparent) 0%,
+			color-mix(in srgb, var(--color-body) 18%, transparent) 52%,
+			transparent 74%
+		);
+}
+
+::selection {
+	background: var(--color-primary);
+	color: var(--color-body);
 }

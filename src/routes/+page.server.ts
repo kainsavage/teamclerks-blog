@@ -7,8 +7,10 @@ export async function load({ fetch }) {
 	const response = await fetch('/api/posts');
 	const posts: Post[] = await response.json();
 
-	// Only show the first 3 posts on the home page
-	const limitedPosts = posts.slice(0, 3);
+	// Featured: latest post; "The Grind": next three
+	const limitedPosts = posts.slice(0, 4);
+	const featured = limitedPosts[0] ?? null;
+	const grindPosts = limitedPosts.slice(1, 4);
 
-	return { posts: limitedPosts };
+	return { featured, grindPosts };
 }
