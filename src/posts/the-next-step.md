@@ -3,7 +3,7 @@ title: The Next Step
 description: Wherein I discuss philosophy, mathematics, and the idea of now.
 date: '2026-07-31'
 hero: the-next-step.png
-bluesky_post_id: 
+bluesky_post_id: 3mrxllrdj2c2n
 categories:
   - philosophy
   - mathematics
